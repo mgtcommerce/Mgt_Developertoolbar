@@ -45,6 +45,54 @@ $_queries = $_profiler->getQueryProfiles();
       <?php echo $_helper->formatSql(wordwrap($this->getLongestQuery())); ?>  
     </td>
   </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Total queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Insert queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::INSERT); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Update queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::UPDATE); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Read queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::SELECT); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Delete queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::DELETE); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Transactions:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::TRANSACTION); ?>  
+    </td>
+  </tr>
 </table>
 
 <ol>

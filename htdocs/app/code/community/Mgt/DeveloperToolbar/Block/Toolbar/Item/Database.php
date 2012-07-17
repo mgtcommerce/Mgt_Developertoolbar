@@ -22,6 +22,8 @@
 
 class Mgt_DeveloperToolbar_Block_Toolbar_Item_Database extends Mgt_DeveloperToolbar_Block_Toolbar_Item
 {
+    protected $_profiler;
+    
     public function __construct($name, $label = '')
     {
         parent::__construct($name, $label);
@@ -31,7 +33,15 @@ class Mgt_DeveloperToolbar_Block_Toolbar_Item_Database extends Mgt_DeveloperTool
 
     public function getLabel()
     {
-        $profiler = Mage::getSingleton('core/resource')->getConnection('core_write')->getProfiler();
+        $profiler = $this->_getProfiler();
         return $profiler->getTotalNumQueries();
+    }
+    
+    protected function _getProfiler()
+    {
+        if (!$this->_profiler) {
+           $this->_profiler = Mage::getSingleton('core/resource')->getConnection('core_write')->getProfiler();
+        }
+        return $this->_profiler;
     }
 }
