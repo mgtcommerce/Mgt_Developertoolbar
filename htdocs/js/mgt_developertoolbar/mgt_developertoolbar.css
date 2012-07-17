@@ -1,4 +1,3 @@
-
 #mgt-developer-toolbar-container {
   position:absolute;
   top:0px;
@@ -44,7 +43,7 @@
   color:#666666;    
 }
  
-#mgt-developer-toolbar-container img.magentoLogo {
+#mgt-developer-toolbar-container img.magento-logo {
   float:left;
   padding:0px 8px 0px 8px; 
   cursor:pointer;
@@ -90,13 +89,13 @@
   padding:10px 8px 10px 8px;
 }
 
-div.mgt-tab-container ul.mgt-tab-container {
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container {
   border-bottom:1px solid #DDDDDD;
   height:20px;
   margin:0px 0px 10px 0px;
 }
 
-div.mgt-tab-container ul.mgt-tabContainer li {
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container li {
   float:left;   
   margin:0px 10px 0px 0px;
   line-height:20px;
@@ -104,44 +103,44 @@ div.mgt-tab-container ul.mgt-tabContainer li {
   border-bottom:0px;
 }
 
-div.mgt-tab-container ul.mgt-tab-container li a {
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container li a {
   text-decoration:none;
   color:#666666;   
   display:block; 
   padding:0px 20px;
 }
 
-div.mgt-tab-container ul.mgt-tab-container li.active a,
-div.mgt-tab-container ul.mgt-tab-container li a:hover  {
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container li.active a,
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container li a:hover  {
   color:#666666;
   background:#DDDDDD;
   display:block; 
   padding:0px 20px;
 }
 
-.mgt-tab-container table td {
+.mgt-developer-toolbar-tab-container table td {
   padding:0px 20px 5px 0px;
   vertical-align:top;  
 }
 
-.phpinfodisplay {
+.mgt-developer-toolbar-phpinfo-display {
   width:600px;
   overflow:hidden;
   text-align:left;
 }
 
-#mgt-tab-content-database ol {
+#mgt-developer-toolbar-tab-database-content ol {
   list-style:decimal;
   padding:20px 0px 0px 20px;
   width:600px;    
 }
 
-#mgt-tab-content-database ol li {
+#mgt-developer-toolbar-tab-database-content ol li {
   padding:5px 10px;
   margin:0px 0px 10px 0px;
 }
 
-#mgt-tab-content-database ol li.even {
+#mgt-developer-toolbar-tab-database-content ol li.even {
   background:#DDDDDD;
 }
 
@@ -150,55 +149,56 @@ span.mgt-developer-toolbar-log-info {
   color:#FF5200;
 }
 
-#mgt-tab-content-database span.query-info {
+#mgt-developer-toolbart-tab-database-content span.query-info {
   display:block;
   font-size:10px;
   color:#666666;
 }
 
-.mgt-profiler-table {
+.mgt-developer-toolbar-profiler-table {
   border:1px solid #DDDDDD;
 }
 
-.mgt-profiler-table td {
+.mgt-developer-toolbar-profiler-table td {
   padding:2px 15px !important;     
 }
 
-.mgt-profiler-table tr.head td {
+.mgt-developer-toolbar-profiler-table tr.head td {
   font-weight:bold;
 }
 
-.mgt-profiler-table tr.odd td {
+.mgt-developer-toolbar-profiler-table tr.odd td {
   background:#DDDDDD;     
 }
 
-#mgt-tab-content-blocks, #mgt-tab-content-events {
+#mgt-developer-toolbar-tab-blocks-content, #mgt-developer-toolbar-tab-events-content {
   width:550px;
 }
 
-#mgt-tab-content-blocks ul, #mgt-tab-content-events ul {
+#mgt-developer-toolbar-tab-blocks-content ul, #mgt-developer-toolbar-tab-events-content ul {
   padding:5px;
   background:#FFFFFF;
 }
 
-#mgt-tab-content-blocks ul.mgt-block-properties, #mgt-tab-content-events ul.mgt-area-events {
+#mgt-developer-toolbar-tab-blocks-content ul.mgt-developer-toolbar-block-properties, 
+#mgt-developer-toolbar-tab-events-content ul.mgt-developer-toolbar-area-events {
   padding:2px;
   font-size:11px;
   border:1px solid silver;
 }
 
-#mgt-tab-content-blocks ul li, #mgt-tab-content-events ul li {
+#mgt-developer-toolbar-tab-blocks-content ul li, #mgt-developer-toolbar-tab-events-content ul li {
   padding:0px 10px; 
 }
 
-#mgt-tab-content-blocks ul li a, #mgt-tab-content-events ul li a {
+#mgt-developer-toolbar-tab-blocks-content ul li a, #mgt-developer-toolbar-tab-events-content ul li a {
   text-decoration:none;
   color:#666666;
   background:url(/media/mgt_developertoolbar/bullet_toggle_plus.png) no-repeat 0 1px; 
   padding:0px 0px 0px 15px;
 }
 
-#mgt-tab-content-blocks ul li.mgt-root-element, #mgt-tab-content-events ul li.mgt-root-element  {
+#mgt-developer-toolbar-tab-blocks-content ul li.mgt-developer-toolbar-root-element, 
+#mgt-developer-toolbar-tab-events-content ul li.mgt-developer-toolbar-root-element  {
   background:#DDDDDD;
 }
-

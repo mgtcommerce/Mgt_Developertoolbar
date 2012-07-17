@@ -41,7 +41,6 @@ class Mgt_DeveloperToolbar_Block_Tab_Events extends Mgt_DeveloperToolbar_Block_T
     public function getEvents()
     {
         if (!$this->_events) {
-        	Varien_Profiler::start('muha');
             foreach ($this->_eventAreas as $eventArea) {
                 $eventConfig = Mage::app()->getConfig()->getNode(sprintf('%s/events', $eventArea));
                 if ($eventConfig instanceof Mage_Core_Model_Config_Element) {
@@ -58,7 +57,6 @@ class Mgt_DeveloperToolbar_Block_Tab_Events extends Mgt_DeveloperToolbar_Block_T
                    }
                 }
             }
-            Varien_Profiler::stop('muha');
         }
         return $this->_events;
     }

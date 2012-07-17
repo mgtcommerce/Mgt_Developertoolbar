@@ -14,7 +14,7 @@
 
 <?php foreach ($this->getItems() as $item): ?>
   <?php if ($item->getContent()): ?>
-    <div class="mgt-developer-toolbar-details" id="mgt-developer-toolbar-details-<?php echo $item->getName(); ?>" style="display:none;">
+    <div class="mgt-developer-toolbar-details" id="mgt-developer-toolbar-item-<?php echo $item->getName(); ?>-details" style="display:none;">
       <?php echo $item->renderContent(); ?>
     </div>
   <?php endif ?>

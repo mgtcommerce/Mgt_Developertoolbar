@@ -45,8 +45,8 @@ class Mgt_DeveloperToolbar_Block_Tab_Blocks extends Mgt_DeveloperToolbar_Block_T
                   continue;
                 }
                 $hasChildren =  $child->getChild() ? true : false;
-                $out .= '<li '.($hasChildren ? 'class="rootElement"' : '').'>';
-                $out .= '<a href="javascript:void(0);" class="mgt-toggle-blog-properties">'.$child->getNameInLayout().'</a>';
+                $out .= '<li '.($hasChildren ? 'class="mgt-developer-toolbar-root-element"' : '').'>';
+                $out .= '<a href="javascript:void(0);" class="mgt-developer-toolbar-toggle-block-properties">'.$child->getNameInLayout().'</a>';
                 $out .= $this->printBlockProperties($child);
                 if ($hasChildren) {
                     $out .= $this->printBlocks($child);
@@ -60,7 +60,7 @@ class Mgt_DeveloperToolbar_Block_Tab_Blocks extends Mgt_DeveloperToolbar_Block_T
     
     protected function printBlockProperties(Mage_Core_Block_Abstract $block)
     {
-        $properties = '<ul class="mgt-block-properties" style="display:none;">';
+        $properties = '<ul class="mgt-developer-toolbar-block-properties" style="display:none;">';
         $properties .= '<li><strong>Class:</strong> '.get_class($block).'</li>';
         if ($block->getTemplate()) {
             $properties .= '<li><strong>Template:</strong> '.$block->getTemplate().'</li>';

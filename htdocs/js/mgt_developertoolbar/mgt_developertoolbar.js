@@ -34,16 +34,15 @@ var Cookie = {
 jQuery.noConflict();
 
 jQuery(document).ready(function(){
-
   if (Cookie.read("mgt-developertoolbar") == 0)    {
-      jQuery("#mgt-developer-toolbar").hide();  
-      jQuery("#mgt-developer-toolbar-powered-by").hide();  
+    jQuery("#mgt-developer-toolbar").hide();  
+    jQuery("#mgt-developer-toolbar-powered-by").hide();  
   }
 
   jQuery("#mgt-developer-toolbar-container img:first").click(function() {
     jQuery(".mgt-developer-toolbar-details").hide();
     jQuery("#mgt-developer-toolbar").toggle();
-    jQuery("#mgt-develope-toolbar-powered-by").toggle();
+    jQuery("#mgt-developer-toolbar-powered-by").toggle();
     var display = jQuery("#mgt-developer-toolbar").attr("style");
     var toolbarHiddenExpression = /(none)/;
     if (toolbarHiddenExpression.exec(display)) {
@@ -53,42 +52,36 @@ jQuery(document).ready(function(){
     }
   });    
   
-  jQuery("ul.mgt-tab-container li").click(function() {
-    var id = jQuery(this).attr("id").split("_");
-    id = id[1];
-    var parent = jQuery(this).parent().parent();
-    parentContainerId = jQuery(parent).attr("id");
-    jQuery("#"+parentContainerId+ " ul.mgt-tab-container li").removeClass("active");
+  jQuery("#mgt-developer-toolbar li").click(function() {
+    var id = jQuery(this).attr("id");
+    jQuery("#mgt-developer-toolbar li").removeClass("active");
     jQuery(this).addClass("active"); 
-    var index = jQuery("#"+parentContainerId+ " ul.mgt-tab-container li").index(this);
-    jQuery("#"+parentContainerId+ " .tabContent").hide();
-    jQuery("#mgt-tab-content-"+id).show();
-  });
-    
-  jQuery("#mgt-developer-toolbar li.content").click(function() {
-    var id = jQuery(this).attr("id").split("_");
-    id = id[1];
     jQuery(".mgt-developer-toolbar-details").each(function(e) {
-      var toolbarDetailContainer = jQuery(".mgt-developer-toolbar-details").get(e);
-      if (jQuery(toolbarDetailContainer).attr("id") != "mgt-developer-toolbar-details-"+id) {
-        jQuery(toolbarDetailContainer).hide();     
+      if (jQuery(this).attr("id") != id+"-details") {
+        jQuery(this).hide();
       }
     });
-    if (jQuery("#mgt-developer-toolbar-details-"+id)) {
-      jQuery("#mgt-developer-toolbar-details-"+id).toggle();    
-    }
+    jQuery("#"+id+"-details").toggle();
   });
   
-  jQuery("#mgt-tab-content-blocks a.mgt-toggle-block-properties").click(function() {
-    jQuery(this).next("ul.mgt-block-properties").toggle(); 
+  jQuery("ul.mgt-developer-toolbar-tab-container li").click(function() {
+    var id = jQuery(this).attr("id");
+    jQuery("ul.mgt-developer-toolbar-tab-container li").removeClass("active"); 
+    jQuery(this).addClass("active"); 
+    jQuery(".mgt-developer-toolbar-tab-content").hide();
+    jQuery("#"+id+"-content").show();
+  });
+
+  jQuery("#mgt-developer-toolbar-tab-blocks-content a.mgt-developer-toolbar-toggle-block-properties").click(function() {
+    jQuery(this).next("ul.mgt-developer-toolbar-block-properties").toggle(); 
   });
   
-  jQuery("#mgt-tab-content-blocks a.mgt-toggle-block-Properties").click(function() {
-     jQuery(this).next("ul.mgt-event-properties").toggle(); 
+  jQuery("#mgt-developer-toolbar-tab-blocks-content a.mgt-developer-toolbar-toggle-block-properties").click(function() {
+     jQuery(this).next("ul.mgt-developer-toolbar-event-properties").toggle(); 
   });
   
-  jQuery("#mgt-tab-content-events a.mgt-toggle-block-properties").click(function() {
-    jQuery(this).next("ul.mgt-events").toggle(); 
+  jQuery("#mgt-developer-toolbar-tab-events-content a.mgt-developer-toolbar-toggle-block-properties").click(function() {
+    jQuery(this).next("ul.mgt-developer-toolbar-events").toggle(); 
 });
   
 });

@@ -53,7 +53,7 @@ $_queries = $_profiler->getQueryProfiles();
   foreach ($_queries as $query): ?>
     <li class="<?php echo ($i % 2 ? 'even' : 'odd')?>">
       <?php echo $_helper->formatSql(wordwrap($query->getQuery())); ?>
-      <span class="queryInfo">
+      <span class="mgt-developer-toolbar-query-info">
       <?php echo $this->__('Elapsed seconds:'); ?> <?php echo $query->getElapsedSecs() ?>
       </span>
     </li>
