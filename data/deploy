@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/php /var/www/Wee_Module_Deployment/htdocs/wee.php deploy /var/www/Mgt_DeveloperToolbar Mgt_DeveloperToolbar_1.4.x-1.7.x_2.0.4 /var/www/Mgt_DeveloperToolbar/data/
