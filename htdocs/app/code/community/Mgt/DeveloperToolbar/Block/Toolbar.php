@@ -22,6 +22,9 @@
 
 class Mgt_DeveloperToolbar_Block_Toolbar extends Mgt_DeveloperToolbar_Block_Template
 {
+    const XML_PATH_MGT_DEVELOPERTOOLBAR_ACTIVE = 'default/mgt_developertoolbar/mgt_developertoolbar/active';
+    const XML_PATH_MGT_DEVELOPERTOOLBAR_ALLOW_IPS = 'default/mgt_developertoolbar/mgt_developertoolbar/allow_ips';
+    
     protected $_items = array();
 
     public function __construct()
@@ -47,5 +50,34 @@ class Mgt_DeveloperToolbar_Block_Toolbar extends Mgt_DeveloperToolbar_Block_Temp
     protected function getItems()
     {
         return $this->_items;
+    }
+    
+    public function isActive()
+    {
+        $isActive = (int)Mage::getConfig()->getNode(self::XML_PATH_MGT_DEVELOPERTOOLBAR_ACTIVE);
+        return $isActive;
+    }
+    
+    public function isIpAllowed()
+    {
+        $allow = true;
+        $allowedIps = (string)Mage::getConfig()->getNode(self::XML_PATH_MGT_DEVELOPERTOOLBAR_ALLOW_IPS);
+        $remoteAddr = Mage::helper('core/http')->getRemoteAddr();
+        if (!empty($allowedIps) && !empty($remoteAddr)) {
+          $allowedIps = preg_split('#\s*,\s*#', $allowedIps, null, PREG_SPLIT_NO_EMPTY);
+          if (array_search($remoteAddr, $allowedIps) === false && array_search(Mage::helper('core/http')->getHttpHost(), $allowedIps) === false) {
+              $allow = false;
+          }
+        }
+        return $allow;
+    }
+    
+    protected function _toHtml()
+    {
+        $isActive = $this->isActive();
+        $isIpAllowed = $this->isIpAllowed();
+        if ($isActive && $isIpAllowed) {
+            return parent::_toHtml();
+        }
     }
 }

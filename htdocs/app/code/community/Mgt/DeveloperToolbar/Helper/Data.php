@@ -20,7 +20,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Mgt_DeveloperToolbar_Helper_Data extends Mage_Core_Helper_Abstract
+class Mgt_DeveloperToolbar_Helper_Data extends Mgt_Base_Helper_Data
 {
     static public function formatBytes($bytes)  
     { 

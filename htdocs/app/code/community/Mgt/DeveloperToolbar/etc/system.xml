@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <mgt-commerce translate="label" module="mgt_developertoolbar">
+            <label>Mgt-Commerce.com</label>
+            <sort_order>105</sort_order>
+        </mgt-commerce>
+    </tabs>
+    <sections>
+        <mgt_developertoolbar translate="label" module="mgt_developertoolbar">
+            <label>Developer Toolbar</label>
+            <tab>mgt-commerce</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>90</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <mgt_developertoolbar translate="label">
+                  <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Active</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <allow_ips translate="label">
+                            <label>Developer Client Restrictions</label>
+                            <comment>Allowed IPs (comma separated) - Leave empty for access from any location.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </allow_ips>
+                    </fields>
+                </mgt_developertoolbar>
+            </groups>
+        </mgt_developertoolbar>
+    </sections>
+</config>

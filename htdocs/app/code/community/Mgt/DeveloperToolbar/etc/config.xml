@@ -45,6 +45,28 @@
         </events>
     </global>
     <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <mgt_developertoolbar translate="title" module="mgt_developertoolbar">
+                                            <title>mgt-commerce</title>
+                                        </mgt_developertoolbar>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                   </children>
+                </admin>
+            </resources>
+        </acl>
         <layout>
             <updates>
                 <mgt_developertoolbar>
