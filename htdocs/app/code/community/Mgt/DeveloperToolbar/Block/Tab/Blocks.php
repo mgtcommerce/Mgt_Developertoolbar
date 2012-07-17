@@ -1,6 +1,7 @@
 <?php
 /**
- * Magento
+ * MGT-Commerce GmbH
+ * http://www.mgt-commerce.com
  *
  * NOTICE OF LICENSE
  *
@@ -10,12 +11,12 @@
  * http://opensource.org/licenses/osl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
+ * to info@mgt-commerce.com so we can send you a copy immediately.
  *
- * @category    Wee
- * @package     Wee_DeveloperToolbar
+ * @category    Mgt
+ * @package     Mgt_DeveloperToolbar
  * @author      Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
- * @copyright   Copyright (c) 2011 (http://www.mgt-commerce.com)
+ * @copyright   Copyright (c) 2012 (http://www.mgt-commerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -45,7 +46,7 @@ class Mgt_DeveloperToolbar_Block_Tab_Blocks extends Mgt_DeveloperToolbar_Block_T
                 }
                 $hasChildren =  $child->getChild() ? true : false;
                 $out .= '<li '.($hasChildren ? 'class="rootElement"' : '').'>';
-                $out .= '<a href="javascript:void(0);" class="toggleBlogProperties">'.$child->getNameInLayout().'</a>';
+                $out .= '<a href="javascript:void(0);" class="mgt-toggle-blog-properties">'.$child->getNameInLayout().'</a>';
                 $out .= $this->printBlockProperties($child);
                 if ($hasChildren) {
                     $out .= $this->printBlocks($child);
@@ -59,7 +60,7 @@ class Mgt_DeveloperToolbar_Block_Tab_Blocks extends Mgt_DeveloperToolbar_Block_T
     
     protected function printBlockProperties(Mage_Core_Block_Abstract $block)
     {
-        $properties = '<ul class="blockProperties" style="display:none;">';
+        $properties = '<ul class="mgt-block-properties" style="display:none;">';
         $properties .= '<li><strong>Class:</strong> '.get_class($block).'</li>';
         if ($block->getTemplate()) {
             $properties .= '<li><strong>Template:</strong> '.$block->getTemplate().'</li>';

@@ -1,5 +1,5 @@
 
-#weeDeveloperToolbarContainer {
+#mgt-developer-toolbar-container {
   position:absolute;
   top:0px;
   right:0px;
@@ -12,7 +12,7 @@
   padding:2px 0px;
 }
 
-#weeDeveloperToolbarPoweredBy {
+#mgt-developer-toolbar-powered-by {
   position:absolute;
   top:26px;
   padding:0px 20px 2px 20px;
@@ -26,51 +26,51 @@
   color:#666666;
 }
 
-#weeDeveloperToolbarPoweredBy a {
+#mgt-developer-toolbar-powered-by a {
   text-decoration:none;
   color:#FF5200;
 }
 
-#weeDeveloperToolbarPoweredBy a span {
-  color:#000000;
-}
-
-#weeDeveloperToolbarPoweredBy a:hover {
+#mgt-developer-toolbar-powered-by a:hover {
   text-decoration:underline;
 }
 
-#weeDeveloperToolbarContainer a {
+#mgt-developer-toolbar-powered-by a span {
+  color:#000000;
+}
+
+#mgt-developer-toolbar-container a {
   text-decoration:none;
   color:#666666;    
 }
  
-#weeDeveloperToolbarContainer img.magentoLogo {
+#mgt-developer-toolbar-container img.magentoLogo {
   float:left;
   padding:0px 8px 0px 8px; 
   cursor:pointer;
 }
  
-#weeDeveloperToolbarContainer ul {
+#mgt-developer-toolbar-container ul {
   float:left;
   padding:0px 10px 0px 8px; 
 }
  
-#weeDeveloperToolbarContainer ul li {
+#mgt-developer-toolbar-container ul li {
   float:left; 
   line-height:22px;
   padding:0px 15px 0px 0px;
 }
 
-#weeDeveloperToolbarContainer ul li.content {
+#mgt-developer-toolbar-container ul li.content {
   cursor:pointer;
 }
  
-#weeDeveloperToolbarContainer ul li img {
+#mgt-developer-toolbar-container ul li img {
   padding:3px 0px 0px 0px;
   vertical-align: top;
 }
 
-#weeDeveloperToolbarContainer ul li.version {
+#mgt-developer-toolbar-container ul li.version {
   background:#666666;
   opacity:0.8;
   color:#FFFFFF;
@@ -78,7 +78,7 @@
   margin:0px 9px 0px 0px;
 }
  
-.weeDeveloperToolbarDetails {
+.mgt-developer-toolbar-details {
   position:absolute;
   top:0px;
   left:0px;
@@ -90,13 +90,13 @@
   padding:10px 8px 10px 8px;
 }
 
-div.tabContainer ul.tabContainer {
+div.mgt-tab-container ul.mgt-tab-container {
   border-bottom:1px solid #DDDDDD;
   height:20px;
   margin:0px 0px 10px 0px;
 }
 
-div.tabContainer ul.tabContainer li {
+div.mgt-tab-container ul.mgt-tabContainer li {
   float:left;   
   margin:0px 10px 0px 0px;
   line-height:20px;
@@ -104,22 +104,22 @@ div.tabContainer ul.tabContainer li {
   border-bottom:0px;
 }
 
-div.tabContainer ul.tabContainer li a {
+div.mgt-tab-container ul.mgt-tab-container li a {
   text-decoration:none;
   color:#666666;   
   display:block; 
   padding:0px 20px;
 }
 
-div.tabContainer ul.tabContainer li.active a,
-div.tabContainer ul.tabContainer li a:hover  {
+div.mgt-tab-container ul.mgt-tab-container li.active a,
+div.mgt-tab-container ul.mgt-tab-container li a:hover  {
   color:#666666;
   background:#DDDDDD;
   display:block; 
   padding:0px 20px;
 }
 
-.tabContainer table td {
+.mgt-tab-container table td {
   padding:0px 20px 5px 0px;
   vertical-align:top;  
 }
@@ -130,75 +130,75 @@ div.tabContainer ul.tabContainer li a:hover  {
   text-align:left;
 }
 
-#tabContent_database ol {
+#mgt-tab-content-database ol {
   list-style:decimal;
   padding:20px 0px 0px 20px;
   width:600px;    
 }
 
-#tabContent_database ol li {
+#mgt-tab-content-database ol li {
   padding:5px 10px;
   margin:0px 0px 10px 0px;
 }
 
-#tabContent_database ol li.even {
+#mgt-tab-content-database ol li.even {
   background:#DDDDDD;
 }
 
-span.weeDeveloperToolbarLogInfo {
+span.mgt-developer-toolbar-log-info {
   font-weight:bold;
   color:#FF5200;
 }
 
-#tabContent_database span.queryInfo {
+#mgt-tab-content-database span.query-info {
   display:block;
   font-size:10px;
   color:#666666;
 }
 
-.profilerTable {
+.mgt-profiler-table {
   border:1px solid #DDDDDD;
 }
 
-.profilerTable td {
+.mgt-profiler-table td {
   padding:2px 15px !important;     
 }
 
-.profilerTable tr.head td {
+.mgt-profiler-table tr.head td {
   font-weight:bold;
 }
 
-.profilerTable tr.odd td {
+.mgt-profiler-table tr.odd td {
   background:#DDDDDD;     
 }
 
-#tabContent_blocks, #tabContent_events {
+#mgt-tab-content-blocks, #mgt-tab-content-events {
   width:550px;
 }
 
-#tabContent_blocks ul, #tabContent_events ul {
+#mgt-tab-content-blocks ul, #mgt-tab-content-events ul {
   padding:5px;
   background:#FFFFFF;
 }
 
-#tabContent_blocks ul.blockProperties, #tabContent_events ul.areaEvents {
+#mgt-tab-content-blocks ul.mgt-block-properties, #mgt-tab-content-events ul.mgt-area-events {
   padding:2px;
   font-size:11px;
   border:1px solid silver;
 }
 
-#tabContent_blocks ul li, #tabContent_events ul li {
+#mgt-tab-content-blocks ul li, #mgt-tab-content-events ul li {
   padding:0px 10px; 
 }
 
-#tabContent_blocks ul li a, #tabContent_events ul li a {
+#mgt-tab-content-blocks ul li a, #mgt-tab-content-events ul li a {
   text-decoration:none;
   color:#666666;
-  background:url(/media/wee_developertoolbar/bullet_toggle_plus.png) no-repeat 0 1px; 
+  background:url(/media/mgt_developertoolbar/bullet_toggle_plus.png) no-repeat 0 1px; 
   padding:0px 0px 0px 15px;
 }
 
-#tabContent_blocks ul li.rootElement, #tabContent_events ul li.rootElement  {
+#mgt-tab-content-blocks ul li.mgt-root-element, #mgt-tab-content-events ul li.mgt-root-element  {
   background:#DDDDDD;
 }
 

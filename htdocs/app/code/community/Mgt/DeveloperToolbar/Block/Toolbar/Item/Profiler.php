@@ -1,6 +1,7 @@
 <?php
 /**
- * Magento
+ * MGT-Commerce GmbH
+ * http://www.mgt-commerce.com
  *
  * NOTICE OF LICENSE
  *
@@ -10,12 +11,12 @@
  * http://opensource.org/licenses/osl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
+ * to info@mgt-commerce.com so we can send you a copy immediately.
  *
- * @category    Wee
- * @package     Wee_DeveloperToolbar
+ * @category    Mgt
+ * @package     Mgt_DeveloperToolbar
  * @author      Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
- * @copyright   Copyright (c) 2011 (http://www.mgt-commerce.com)
+ * @copyright   Copyright (c) 2012 (http://www.mgt-commerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 

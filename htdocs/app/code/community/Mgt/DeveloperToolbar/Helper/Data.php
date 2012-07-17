@@ -1,6 +1,7 @@
 <?php
 /**
- * Magento
+ * MGT-Commerce GmbH
+ * http://www.mgt-commerce.com
  *
  * NOTICE OF LICENSE
  *
@@ -10,12 +11,12 @@
  * http://opensource.org/licenses/osl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
+ * to info@mgt-commerce.com so we can send you a copy immediately.
  *
- * @category    Wee
- * @package     Wee_DeveloperToolbar
+ * @category    Mgt
+ * @package     Mgt_DeveloperToolbar
  * @author      Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
- * @copyright   Copyright (c) 2011 (http://www.mgt-commerce.com)
+ * @copyright   Copyright (c) 2012 (http://www.mgt-commerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -47,7 +48,7 @@ class Mgt_DeveloperToolbar_Helper_Data extends Mage_Core_Helper_Abstract
     
     static public function formatSql($sql)
     {
-        return preg_replace('/\b(UPDATE|SET|SELECT|FROM|AS|LIMIT|ASC|COUNT|DESC|WHERE|LEFT JOIN|INNER JOIN|RIGHT JOIN|ORDER BY|GROUP BY|IN|LIKE|DISTINCT|DELETE|INSERT|INTO|VALUES)\b/', '<span class="weeDeveloperToolbarLogInfo">\\1</span>', $sql);
+        return preg_replace('/\b(UPDATE|SET|SELECT|FROM|AS|LIMIT|ASC|COUNT|DESC|WHERE|LEFT JOIN|INNER JOIN|RIGHT JOIN|ORDER BY|GROUP BY|IN|LIKE|DISTINCT|DELETE|INSERT|INTO|VALUES)\b/', '<span class="mgt-developer-toolbar-log-info">\\1</span>', $sql);
     }
     
     static public function getMediaUrl()

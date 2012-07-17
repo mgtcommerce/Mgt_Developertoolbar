@@ -37,7 +37,7 @@
             <controller_action_layout_render_before>
                 <observers>
                     <mgt_developertoolbar>
-                        <class>Wee_DeveloperToolbar_Model_Observer</class>
+                        <class>Mgt_DeveloperToolbar_Model_Observer</class>
                         <method>removeCoreProfilerBlock</method>
                     </mgt_developertoolbar>
                 </observers>

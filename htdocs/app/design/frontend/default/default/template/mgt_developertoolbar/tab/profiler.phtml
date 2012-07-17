@@ -16,7 +16,7 @@ $i = 0;
         <td><?php echo number_format($timerData['sum'],6); ?></td>
         <td><?php echo $timerData['count']; ?></td>
         <td><?php echo number_format($timerData['emalloc']); ?></td>
-        <td><?php echo Mage::helper('wee_developertoolbar')->formatBytes($timerData['emalloc']); ?></td>
+        <td><?php echo Mage::helper('mgt_developertoolbar')->formatBytes($timerData['emalloc']); ?></td>
       </tr>
     <?php $i++; ?>
   <?php endforeach ?>
