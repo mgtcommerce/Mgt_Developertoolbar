@@ -63,7 +63,8 @@ class Mgt_DeveloperToolbar_Block_Tab_Blocks extends Mgt_DeveloperToolbar_Block_T
         $properties = '<ul class="mgt-developer-toolbar-block-properties" style="display:none;">';
         $properties .= '<li><strong>Class:</strong> '.get_class($block).'</li>';
         if ($block->getTemplate()) {
-            $properties .= '<li><strong>Template:</strong> '.$block->getTemplate().'</li>';
+            $template = $block->getTemplateFile() ? $block->getTemplateFile() : $block->getTemplate();
+            $properties .= '<li><strong>Template:</strong> '.$template.'</li>';
         }
         $properties .= '</ul>';
         return $properties;
