@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+     <modules>
+        <Wee_Base>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Wee_Base>
+     </modules>
+</config>

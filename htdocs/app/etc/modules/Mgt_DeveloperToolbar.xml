@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+     <modules>
+        <Mgt_DeveloperToolbar>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Mgt_DeveloperToolbar>
+     </modules>
+</config>

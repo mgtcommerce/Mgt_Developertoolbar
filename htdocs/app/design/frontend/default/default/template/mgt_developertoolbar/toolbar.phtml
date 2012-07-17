@@ -1,0 +1,21 @@
+<div class="weeDeveloperToolbar" id="weeDeveloperToolbarContainer">
+  <img class="magentoLogo" src="<?php echo Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/logo.png'; ?>" alt="" />
+    <?php if ($this->getItems()): ?>
+    <ul id="weeDeveloperToolbar">
+        <?php foreach ($this->getItems() as $item): ?>
+          <?php echo $item->render(); ?>
+        <?php endforeach ?>
+    </ul>
+    <?php endif ?>
+</div>
+<div id="weeDeveloperToolbarPoweredBy">
+  <?php echo $this->__('powered by'); ?> <a href="http://www.mgt-commerce.com" target="_blank" title="<?php echo $this->__('mgt-commerce.com'); ?>"><span>mgt-</span>-commerce.com</a>
+</div>
+
+<?php foreach ($this->getItems() as $item): ?>
+  <?php if ($item->getContent()): ?>
+    <div class="weeDeveloperToolbarDetails" id="weeDeveloperToolbarDetails_<?php echo $item->getName(); ?>" style="display:none;">
+      <?php echo $item->renderContent(); ?>
+    </div>
+  <?php endif ?>
+<?php endforeach ?>

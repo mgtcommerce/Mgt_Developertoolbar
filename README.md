@@ -1,2 +1,0 @@
-Mgt_Developertoolbar
-====================

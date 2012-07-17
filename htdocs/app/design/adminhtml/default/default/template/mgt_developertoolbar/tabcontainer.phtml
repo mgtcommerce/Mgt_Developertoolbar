@@ -1,0 +1,17 @@
+<?php if ($this->getTabs()): ?>
+<div class="tabContainer" id="tabContainer_<?php echo $this->getName(); ?>">
+  <ul class="tabContainer">
+    <?php foreach ($this->getTabs() as $tab): ?>
+      <li id="tab_<?php echo $tab->getName();?>" class="tab_<?php echo $tab->getName();?> <?php echo ($tab->isActive() ? 'active' : '') ?>">
+        <a href="javascript:void(0);"><?php echo $tab->getLabel(); ?></a>
+      </li>
+    <?php endforeach ?>
+  </ul>
+  
+  <?php foreach ($this->getTabs() as $tab): ?>
+    <div id="tabContent_<?php echo $tab->getName();?>" class="tabContent" style="display:<?php echo ($tab->isActive() ? 'block' : 'none'); ?>">
+      <?php echo $tab->render(); ?> 
+    </div>
+  <?php endforeach ?>    
+</div>
+<?php endif ?>

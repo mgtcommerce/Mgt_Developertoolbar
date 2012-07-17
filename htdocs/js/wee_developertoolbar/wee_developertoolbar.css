@@ -1,0 +1,204 @@
+
+#weeDeveloperToolbarContainer {
+  position:absolute;
+  top:0px;
+  right:0px;
+  float:right;
+  background:#FFFFFF;
+  z-index:10000;
+  text-align:left;
+  border-left:1px solid #DDDDDD;
+  border-bottom:1px solid #DDDDDD;
+  padding:2px 0px;
+}
+
+#weeDeveloperToolbarPoweredBy {
+  position:absolute;
+  top:26px;
+  padding:0px 20px 2px 20px;
+  border-left:1px solid #DDDDDD;
+  border-bottom:1px solid #DDDDDD;
+  background:#FFFFFF;
+  z-index:11000;
+  right:0px;
+  float:right;
+  font-size:10px;
+  color:#666666;
+}
+
+#weeDeveloperToolbarPoweredBy a {
+  text-decoration:none;
+  color:#FF5200;
+}
+
+#weeDeveloperToolbarPoweredBy a span {
+  color:#000000;
+}
+
+#weeDeveloperToolbarPoweredBy a:hover {
+  text-decoration:underline;
+}
+
+#weeDeveloperToolbarContainer a {
+  text-decoration:none;
+  color:#666666;    
+}
+ 
+#weeDeveloperToolbarContainer img.magentoLogo {
+  float:left;
+  padding:0px 8px 0px 8px; 
+  cursor:pointer;
+}
+ 
+#weeDeveloperToolbarContainer ul {
+  float:left;
+  padding:0px 10px 0px 8px; 
+}
+ 
+#weeDeveloperToolbarContainer ul li {
+  float:left; 
+  line-height:22px;
+  padding:0px 15px 0px 0px;
+}
+
+#weeDeveloperToolbarContainer ul li.content {
+  cursor:pointer;
+}
+ 
+#weeDeveloperToolbarContainer ul li img {
+  padding:3px 0px 0px 0px;
+  vertical-align: top;
+}
+
+#weeDeveloperToolbarContainer ul li.version {
+  background:#666666;
+  opacity:0.8;
+  color:#FFFFFF;
+  padding:0px 9px 0px 9px;
+  margin:0px 9px 0px 0px;
+}
+ 
+.weeDeveloperToolbarDetails {
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:9999;
+  width:98%;
+  background:#ffffff;
+  border:1px solid #dddddd; 
+  text-align:left; 
+  padding:10px 8px 10px 8px;
+}
+
+div.tabContainer ul.tabContainer {
+  border-bottom:1px solid #DDDDDD;
+  height:20px;
+  margin:0px 0px 10px 0px;
+}
+
+div.tabContainer ul.tabContainer li {
+  float:left;   
+  margin:0px 10px 0px 0px;
+  line-height:20px;
+  border:1px solid #DDDDDD;
+  border-bottom:0px;
+}
+
+div.tabContainer ul.tabContainer li a {
+  text-decoration:none;
+  color:#666666;   
+  display:block; 
+  padding:0px 20px;
+}
+
+div.tabContainer ul.tabContainer li.active a,
+div.tabContainer ul.tabContainer li a:hover  {
+  color:#666666;
+  background:#DDDDDD;
+  display:block; 
+  padding:0px 20px;
+}
+
+.tabContainer table td {
+  padding:0px 20px 5px 0px;
+  vertical-align:top;  
+}
+
+.phpinfodisplay {
+  width:600px;
+  overflow:hidden;
+  text-align:left;
+}
+
+#tabContent_database ol {
+  list-style:decimal;
+  padding:20px 0px 0px 20px;
+  width:600px;    
+}
+
+#tabContent_database ol li {
+  padding:5px 10px;
+  margin:0px 0px 10px 0px;
+}
+
+#tabContent_database ol li.even {
+  background:#DDDDDD;
+}
+
+span.weeDeveloperToolbarLogInfo {
+  font-weight:bold;
+  color:#FF5200;
+}
+
+#tabContent_database span.queryInfo {
+  display:block;
+  font-size:10px;
+  color:#666666;
+}
+
+.profilerTable {
+  border:1px solid #DDDDDD;
+}
+
+.profilerTable td {
+  padding:2px 15px !important;     
+}
+
+.profilerTable tr.head td {
+  font-weight:bold;
+}
+
+.profilerTable tr.odd td {
+  background:#DDDDDD;     
+}
+
+#tabContent_blocks, #tabContent_events {
+  width:550px;
+}
+
+#tabContent_blocks ul, #tabContent_events ul {
+  padding:5px;
+  background:#FFFFFF;
+}
+
+#tabContent_blocks ul.blockProperties, #tabContent_events ul.areaEvents {
+  padding:2px;
+  font-size:11px;
+  border:1px solid silver;
+}
+
+#tabContent_blocks ul li, #tabContent_events ul li {
+  padding:0px 10px; 
+}
+
+#tabContent_blocks ul li a, #tabContent_events ul li a {
+  text-decoration:none;
+  color:#666666;
+  background:url(/media/wee_developertoolbar/bullet_toggle_plus.png) no-repeat 0 1px; 
+  padding:0px 0px 0px 15px;
+}
+
+#tabContent_blocks ul li.rootElement, #tabContent_events ul li.rootElement  {
+  background:#DDDDDD;
+}
+

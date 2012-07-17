@@ -1,0 +1,38 @@
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Controller Class'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $this->getFrontControllerName(); ?>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        <strong><?php echo $this->__('Controller Module'); ?>:</strong>
+      </td>
+      <td>
+        <?php echo $this->getControllerModuleName(); ?>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong><?php echo $this->__('Controller Action'); ?>:</strong>
+      </td>
+      <td>
+        <?php echo $this->getControllerActionName(); ?>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong><?php echo $this->__('Params'); ?>:</strong>
+      </td>
+      <td>
+        <?php 
+          echo '<pre>';
+          print_r($this->getParams());
+          echo '</pre>';
+        ?>
+      </td>
+    </tr>
+</table>

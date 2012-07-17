@@ -1,0 +1,71 @@
+<?php 
+$_website = $this->getWebsite();
+$_store = $this->getStore();
+?>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Website Id'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $_website->getId(); ?>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Website Name'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $_website->getName(); ?>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Store Id'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $_store->getGroupId(); ?>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Store Name'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $_store->getGroup()->getName(); ?>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Store View Id'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $_store->getId(); ?>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Store View Code'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $_store->getCode(); ?>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Store View Name'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $_store->getName(); ?>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Cache Method'); ?>:</strong>
+    </td>
+    <td>
+      <?php echo $this->getCacheMethod(); ?>
+    </td>
+  </tr>
+</table>

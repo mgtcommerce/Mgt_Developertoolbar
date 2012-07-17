@@ -1,0 +1,34 @@
+<form action="<?php echo Mage::getUrl('mgt_developertoolbar'); ?>" method="post">
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <strong><?php echo $this->__('Frontend Hints:'); ?></strong>
+            </td>
+            <td>
+                <input type="checkbox" name="frontendHints" <?php echo ($this->isFrontendHintsEnabled() ? 'checked="checked"' : ''); ?> value="1" />
+                (Disable cache to use this feature)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong><?php echo $this->__('Translate Inline:'); ?></strong>
+            </td>
+            <td>
+                <input type="checkbox" name="translateInline" <?php echo ($this->isTranslateInlineEnabled() ? 'checked="checked"' : ''); ?> value="1" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong><?php echo $this->__('Clear Cache:'); ?></strong>
+            </td>
+            <td>
+                <input type="checkbox" name="clearCache" value="1" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="submit" value="<?php echo $this->__('Save'); ?>" />
+            </td>
+        </tr>
+    </table>
+</form>

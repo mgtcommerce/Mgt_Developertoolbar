@@ -1,0 +1,23 @@
+<?php 
+$_timers = $this->getTimers();
+$i = 0;
+?>
+<table class="profilerTable" border="0" cellpadding="0" cellspacing="0">
+  <tr class="head">
+    <td><?php echo $this->__('Name'); ?></td>
+    <td><?php echo $this->__('Time'); ?></td>
+    <td><?php echo $this->__('Cnt'); ?></td>
+    <td><?php echo $this->__('Emalloc'); ?></td>
+    <td><?php echo $this->__('RealMem'); ?></td>
+  </tr>
+  <?php foreach ($_timers as $timerName => $timerData): ?>
+      <tr class="<?php echo ($i % 2 ? 'even' : 'odd'); ?>">
+        <td><?php echo $timerName; ?></td>
+        <td><?php echo number_format($timerData['sum'],6); ?></td>
+        <td><?php echo $timerData['count']; ?></td>
+        <td><?php echo number_format($timerData['emalloc']); ?></td>
+        <td><?php echo Mage::helper('wee_developertoolbar')->formatBytes($timerData['emalloc']); ?></td>
+      </tr>
+    <?php $i++; ?>
+  <?php endforeach ?>
+</table>

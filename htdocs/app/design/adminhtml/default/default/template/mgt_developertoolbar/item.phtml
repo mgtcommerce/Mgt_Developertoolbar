@@ -1,0 +1,6 @@
+<li class="<?php echo $this->getName(); ?><?php echo ($this->getContent() ? ' content' : '') ?>" id="toolbaritem_<?php echo $this->getName(); ?>">
+  <?php if ($this->getIcon()): ?>
+    <img src="<?php echo $this->getIcon(); ?>" alt="" />
+  <?php endif ?>
+  <?php echo $this->getLabel(); ?>
+</li>

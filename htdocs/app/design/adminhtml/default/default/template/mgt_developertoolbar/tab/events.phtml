@@ -1,0 +1,33 @@
+<?php 
+  $_events = $this->getEvents();
+?>
+
+<?php foreach ($_events as $eventArea => $events): ?>
+  <ul>
+    <li class="rootElement"><a href="javascript:void(0);" class="toggleBlogProperties"><?php echo $eventArea; ?> (<?php echo count($events); ?>)</a>
+      <ul style="display:none" class="events">
+      <?php foreach ($events as $eventName => $event): ?>
+        <li>
+          <?php 
+            $numberOfObservers = isset($event['observer']) ? count($event['observer']) : 0;
+          ?>
+          <a href="javascript:void(0);" class="toggleBlogProperties"><?php echo $eventName; ?> (<?php echo $numberOfObservers; ?>)</a>
+          <?php if($numberOfObservers): ?>
+            <ul style="display:none" class="events">
+            <?php foreach ($event['observer'] as $observer): ?>
+               <li>
+                 <ul>
+                   <li><strong><?php echo $observer->getName(); ?></strong></li>
+                   <li><strong><?php echo $this->__('Class: '); ?></strong> <?php echo $observer->getClass(); ?></li>
+                   <li><strong><?php echo $this->__('Method: '); ?></strong> <?php echo $observer->getMethod(); ?></li>
+                 </ul>
+               </li>
+            <?php endforeach ?>
+            </ul>
+          <?php endif ?>
+        </li>
+      <?php endforeach ?>
+      </ul>
+   </li>
+  </ul>
+<?php endforeach ?>
