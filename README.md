@@ -9,7 +9,7 @@ This makes all block and template changes easier than ever before.
 
 ## DEMO
 
-[Url: http://developertoolbar.mgt-commerce.com/](http://developertoolbar.mgt-commerce.com/)
+[DEMO: http://developertoolbar.mgt-commerce.com/](http://developertoolbar.mgt-commerce.com/)
 
 ## INSTALLATION
 
@@ -53,7 +53,6 @@ This makes all block and template changes easier than ever before.
 * show complete template path in nested blocks
 * show number of inserts, updates, select, deletes and transactions
 * new jquery version 1.7.2 has been added
-* cleanup of unused code
 
 2.0.0
 
