@@ -29,7 +29,7 @@ class Mgt_DeveloperToolbar_Block_Toolbar extends Mgt_DeveloperToolbar_Block_Temp
 
     public function __construct()
     {
-        $this->_addDefaultItems();  
+        $this->_addDefaultItems();
     }
     
     protected function _addDefaultItems()
