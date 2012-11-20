@@ -63,7 +63,7 @@
                                 </config>
                             </children>
                         </system>
-                   </children>
+                    </children>
                 </admin>
             </resources>
         </acl>
@@ -93,4 +93,11 @@
             </updates>
         </layout>
     </frontend>
+    <default>
+        <mgt_developertoolbar>
+            <mgt_developertoolbar>
+                <active>1</active>
+            </mgt_developertoolbar>
+        </mgt_developertoolbar>
+    </default>
 </config>
