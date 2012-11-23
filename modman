@@ -1,0 +1,11 @@
+htdocs/app/code/community/Mgt/DeveloperToolbar app/code/community/Mgt/DeveloperToolbar
+htdocs/app/code/local/Mgt/Base app/code/local/Mgt/Base
+htdocs/app/design/adminhtml/default/default/layout/mgt_developertoolbar.xml app/design/adminhtml/default/default/layout/mgt_developertoolbar.xml
+htdocs/app/design/adminhtml/default/default/template/mgt_developertoolbar app/design/adminhtml/default/default/template/mgt_developertoolbar
+htdocs/app/design/frontend/default/default/layout/mgt_developertoolbar.xml app/design/frontend/base/default/layout/mgt_developertoolbar.xml
+htdocs/app/design/frontend/default/default/template/mgt_developertoolbar app/design/frontend/base/default/template/mgt_developertoolbar
+htdocs/js/mgt_developertoolbar js/mgt_developertoolbar
+htdocs/media/mgt_developertoolbar media/mgt_developertoolbar
+
+htdocs/app/etc/modules/Mgt_Base.xml app/etc/modules/Mgt_Base.xml
+htdocs/app/etc/modules/Mgt_DeveloperToolbar.xml app/etc/modules/Mgt_DeveloperToolbar.xml
