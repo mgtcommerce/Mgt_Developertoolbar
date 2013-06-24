@@ -1,6 +1,6 @@
 {
     "name": "mgt/Mgt_Developertoolbar",
-    "license": "OSL-3.0",
+    "license": "proprietary",
     "type": "magento-module",
     "description": "Developer toolbar",
     "homepage": "https://github.com/mgtcommerce/Mgt_Developertoolbar",
