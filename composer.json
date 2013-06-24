@@ -1,5 +1,5 @@
 {
-    "name": "mgt/Mgt_Developertoolbar",
+    "name": "mgt/mgt_developertoolbar",
     "license": "proprietary",
     "type": "magento-module",
     "description": "Developer toolbar",
