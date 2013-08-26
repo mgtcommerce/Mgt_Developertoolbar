@@ -1,0 +1,17 @@
+{
+    "name": "mgt/mgt_developertoolbar",
+    "license": "proprietary",
+    "type": "magento-module",
+    "description": "Developer toolbar",
+    "homepage": "https://github.com/mgtcommerce/Mgt_Developertoolbar",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name":" Stefan Wieczorek",
+            "email": "stefan.wieczorek@mgt-commerce.com"
+        }
+    ]
+}
+

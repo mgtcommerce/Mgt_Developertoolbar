@@ -11,33 +11,6 @@
   padding:2px 0px;
 }
 
-#mgt-developer-toolbar-powered-by {
-  position:absolute;
-  top:26px;
-  padding:0px 20px 2px 20px;
-  border-left:1px solid #DDDDDD;
-  border-bottom:1px solid #DDDDDD;
-  background:#FFFFFF;
-  z-index:11000;
-  right:0px;
-  float:right;
-  font-size:10px;
-  color:#666666;
-}
-
-#mgt-developer-toolbar-powered-by a {
-  text-decoration:none;
-  color:#FF5200;
-}
-
-#mgt-developer-toolbar-powered-by a:hover {
-  text-decoration:underline;
-}
-
-#mgt-developer-toolbar-powered-by a span {
-  color:#000000;
-}
-
 #mgt-developer-toolbar-container a {
   text-decoration:none;
   color:#666666;    
