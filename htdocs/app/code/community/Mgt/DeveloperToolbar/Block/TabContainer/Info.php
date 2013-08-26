@@ -31,6 +31,6 @@ class Mgt_DeveloperToolbar_Block_TabContainer_Info extends Mgt_DeveloperToolbar_
         $this->addTab(new Mgt_DeveloperToolbar_Block_Tab_Events('events', 'Events/Observer'));
         $this->addTab(new Mgt_DeveloperToolbar_Block_Tab_Blocks('blocks', 'Blocks'));
         $this->addTab(new Mgt_DeveloperToolbar_Block_Tab_Config('config', 'Config'));
-        $this->addTab(new Mgt_DeveloperToolbar_Block_Tab_PhpInfo('phpinfo', 'PHP-Info'));
+        //$this->addTab(new Mgt_DeveloperToolbar_Block_Tab_PhpInfo('phpinfo', 'PHP-Info'));
     }
 }
