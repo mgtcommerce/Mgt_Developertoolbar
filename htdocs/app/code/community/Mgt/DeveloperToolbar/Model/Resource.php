@@ -44,7 +44,12 @@ class Mgt_DeveloperToolbar_Model_Resource extends Mage_Core_Model_Resource
 
         $typeInstance = $this->getConnectionTypeInstance((string)$connConfig->type);
         $conn = $typeInstance->getConnection($connConfig);
-        $conn->getProfiler()->setEnabled(true);
+
+        $configPath = Mgt_DeveloperToolbar_Block_Toolbar::XML_PATH_MGT_DEVELOPERTOOLBAR_ACTIVE;
+        if ((int) Mage::getConfig()->getNode($configPath)) {
+            $conn->getProfiler()->setEnabled(true);
+        }
+
         if (method_exists($conn, 'setCacheAdapter')) {
             $conn->setCacheAdapter(Mage::app()->getCache());
         }
