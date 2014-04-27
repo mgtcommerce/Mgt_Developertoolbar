@@ -40,18 +40,20 @@ class Mgt_DeveloperToolbar_Block_Tab_PhpInfo extends Mgt_DeveloperToolbar_Block_
         ob_start();
         phpinfo();
         preg_match ('%<style type="text/css">(.*?)</style>.*?(<body>.*</body>)%s', ob_get_clean(), $matches);
-        echo "<div class='mgt-developer-toolbar-phpinfo-display'><style type='text/css'>\n",
+        if(count($matches) > 2) {
+            echo "<div class='mgt-developer-toolbar-phpinfo-display'><style type='text/css'>\n",
             join( "\n",
                 array_map(
                     create_function(
                         '$i',
                         'return ".mgt-developer-toolbar-phpinfo-display " . preg_replace( "/,/", ",.phpinfodisplay ", $i );'
-                        ),
+                    ),
                     preg_split( '/\n/', $matches[1] )
-                    )
-                ),
+                )
+            ),
             "</style>\n",
             $matches[2],
-        "\n</div>\n";
+            "\n</div>\n";
+        }
     }
 }
