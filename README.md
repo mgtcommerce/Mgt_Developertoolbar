@@ -1,4 +1,4 @@
-### Welcome to the Mgt Developer Toolbar for Magento 1.4.x - 1.7.x!
+### Welcome to the Mgt Developer Toolbar for Magento 1.4.x - 1.9.x!
 
 The Mgt Developer Toolbar for magento is very useful for all developers and frontend guys. 
 Many professional developers all over the world use this extension to find possible performance bottlenecks. 
