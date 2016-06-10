@@ -1,0 +1,29 @@
+<?php 
+
+$handles = $this->getHandles();
+
+?>
+
+<div class="mgt-developer-toolbar-sidebar-blocks">
+  <div class="container">
+    <h2><?php echo __('Layout Handles'); ?></h2>
+    <table cellspacing="0" cellpadding="0" class="data-table">
+    <thead>
+      <tr>
+        <th width="100%">
+          <?php echo __('Handle'); ?>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($handles as $handle): ?>
+        <tr>
+          <td>
+            <?php echo $handle; ?>
+          </td>
+        </tr>
+      <?php endforeach ?>
+    </tbody>
+  </table>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\Action\AbstractAction">
+        <plugin name="mgt-developer-toolbar-app-action-dispatchController-toolbar-plugin"
+            type="Mgt\DeveloperToolbar\Model\App\FrontController\ToolbarPlugin"/>
+    </type>
+</config>

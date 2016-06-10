@@ -1,0 +1,149 @@
+<?php 
+
+$formatHelper = $this->helper('Mgt\DeveloperToolbar\Helper\Format');
+
+$getParameters = $this->getGetParameters();
+$postParameters = $this->getPostParameters();
+$requestHeaders = $this->getRequestHeaders();
+$requestAttributes = $this->getRequestAttributes();
+$serverParameters = $this->getServerParameters();
+$cookies = $this->getCookies();
+
+?>
+
+<div class="container">
+
+  <div class="mgt-developer-toolbar-sidebar-request">
+
+    <h2><?php echo __('Request'); ?></h2>
+
+    <h3><?php echo __('GET Parameters'); ?></h3>
+
+    <?php if (count($getParameters)): ?>
+      <table class="data-table" cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th width="40%"><?php echo __('Key'); ?></th>
+            <th><?php echo __('Value'); ?></th>
+           </tr>
+         </thead>
+         <tbody>
+           <?php foreach ($getParameters as $key => $value): ?>
+           <tr>
+             <td><?php echo $key; ?></td>
+             <td><?php echo $value; ?></td>
+           </tr>
+           <?php endforeach ?>
+         </tbody>
+       </table>
+    <?php else: ?>
+      <div class="no-parameters">
+        <p><?php echo __('No GET parameters'); ?></p>
+      </div>
+    <?php endif ?>
+  
+    <h3><?php echo __('POST Parameters'); ?></h3>
+  
+    <?php if (count($postParameters)): ?>
+      <table class="data-table" cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th width="40%"><?php echo __('Key'); ?></th>
+            <th><?php echo __('Value'); ?></th>
+           </tr>
+         </thead>
+         <tbody>
+           <?php foreach ($postParameters as $key => $value): ?>
+             <tr>
+               <td><?php echo $key; ?></td>
+               <td><?php echo $value; ?></td>
+             </tr>
+           <?php endforeach ?>
+         </tbody>
+       </table>
+    <?php else: ?>
+      <div class="no-parameters">
+        <p><?php echo __('No POST parameters'); ?></p>
+      </div>
+    <?php endif ?>
+  
+    <h3><?php echo __('Request Attributes'); ?></h3>
+  
+    <table class="data-table" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th width="40%"><?php echo __('Key'); ?></th>
+          <th><?php echo __('Value'); ?></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($requestAttributes as $key => $value): ?>
+          <tr>
+            <td><?php echo $key; ?></td>
+            <td><?php echo $value; ?></td>
+          </tr>
+        <?php endforeach ?>
+      </tbody>
+    </table>
+
+    <h3><?php echo __('Request Headers'); ?></h3>
+  
+    <table class="data-table" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th width="40%"><?php echo __('Key'); ?></th>
+          <th><?php echo __('Value'); ?></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($requestHeaders as $key => $value): ?>
+          <tr>
+            <td><?php echo $key; ?></td>
+            <td><?php echo $value; ?></td>
+          </tr>
+        <?php endforeach ?>
+      </tbody>
+    </table>
+  
+    <h3><?php echo __('Server Parameters'); ?></h3>
+  
+    <table class="data-table" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th width="40%"><?php echo __('Key'); ?></th>
+          <th><?php echo __('Value'); ?></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($serverParameters as $key => $value): ?>
+          <?php if (is_string($value)) : ?>
+            <tr>
+              <td><?php echo $key; ?></td>
+              <td><?php echo $value; ?></td>
+            </tr>
+          <?php endif ?>
+       <?php endforeach ?>
+      </tbody>
+    </table>
+  
+    <h3><?php echo __('Cookies'); ?></h3>
+
+    <table class="data-table" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th width="40%"><?php echo __('Key'); ?></th>
+          <th><?php echo __('Value'); ?></th>
+         </tr>
+       </thead>
+       <tbody>
+         <?php foreach ($cookies as $key => $value): ?>
+           <tr>
+             <td><?php echo $key; ?></td>
+             <td><?php echo $value; ?></td>
+           </tr>
+         <?php endforeach ?>
+       </tbody>
+     </table>
+  </div>
+
+</div>

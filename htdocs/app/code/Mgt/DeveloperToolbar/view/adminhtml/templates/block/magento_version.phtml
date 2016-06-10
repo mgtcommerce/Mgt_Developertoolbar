@@ -1,0 +1,28 @@
+<?php 
+
+$urlBuilder = $this->getUrlBuilder();
+$magentoVersion = $this->getMagentoVersion();
+$token = $this->getToken();
+
+?>
+
+<div class="mgt-developer-toolbar-block mgt-developer-toolbar-block-magento-version">         
+  <a href="<?php echo $urlBuilder->getUrl('mgtdevelopertoolbar/toolbar/container/execute', ['block' => 'dashboard', 'token' => $token]); ?>">
+    <svg viewBox="0 0 20 20" x="0px" y="0px">
+      <path d="M13.813,12.551c-0.764,0-1.454,0.307-1.961,0.799L6.591,9.849c0.028-0.162,0.05-0.325,0.05-0.495
+        c0-0.157-0.022-0.309-0.046-0.46l5.149-3.105c0.512,0.524,1.225,0.852,2.016,0.852c1.558,0,2.82-1.264,2.82-2.821S15.317,1,13.76,1
+        c-1.559,0-2.82,1.263-2.82,2.82c0,0.043,0.011,0.083,0.012,0.125L5.593,7.176C5.107,6.781,4.496,6.534,3.82,6.534
+        C2.263,6.534,1,7.796,1,9.354c0,1.557,1.263,2.821,2.82,2.821c0.663,0,1.264-0.238,1.745-0.621l5.448,3.625
+        c-0.005,0.065-0.02,0.126-0.02,0.192c0,1.558,1.262,2.82,2.82,2.82c1.558,0,2.82-1.263,2.82-2.82S15.371,12.551,13.813,12.551z">
+      </path>
+    </svg>
+    <span><?php echo $magentoVersion; ?></span>
+  </a>     
+  <div class="mgt-developer-toolbar-block-information" style="display:none;">
+    <ul>
+      <li>
+         <strong><?php echo __('Magento Version') ?>:</strong> <?php echo $magentoVersion; ?>
+      </li>
+    </ul>
+  </div>
+</div>

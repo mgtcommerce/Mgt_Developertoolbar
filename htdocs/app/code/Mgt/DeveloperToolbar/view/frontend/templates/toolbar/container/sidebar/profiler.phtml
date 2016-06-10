@@ -1,0 +1,65 @@
+<?php 
+
+$formatHelper = $this->helper('Mgt\DeveloperToolbar\Helper\Format');
+$timers = $this->getTimers();
+$sortedTimers = $this->sortTimers($timers);
+
+?>
+
+<div class="mgt-developer-toolbar-sidebar-profiler">
+  <h2><?php echo __('Profiler'); ?></h2>
+  <div class="mgt-developer-toolbar-sidebar-profiler-grid">
+    <table id="profiler-grid" cellspacing="0" cellpadding="0" class="data-table data-table-profiler">
+      <thead>
+        <tr>
+          <th width="70%">
+            <?php echo __('Timer'); ?>
+          </th>
+          <th width="15%">
+            <?php echo __('Time (ms)'); ?>
+          </th>
+          <th width="10%">
+            <?php echo __('AVG (ms)'); ?>
+          </th>
+          <th width="5%">
+            <?php echo __('Count'); ?>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php if (count($sortedTimers)): ?>
+          <?php foreach ($sortedTimers as $timer): ?>
+            <tr class="treegrid-<?php echo $timer['uid']; ?> <?php echo (isset($timer['parent']) ? sprintf('treegrid-parent-%s', $timer['parent']) : ''); ?>">
+              <td>
+                <?php echo $timer['label']; ?>
+              </td>
+              <td>
+                <?php echo $formatHelper->formatTime($timer['sum']); ?>
+                <?php if (isset($timer['percentage']) && $timer['percentage'] > 1): ?>
+                 <span class="time-percentage" style="width:<?php echo $timer['percentage']; ?>%"></span>
+                <?php endif?>
+              </td>
+              <td>
+                <?php echo $formatHelper->formatTime($timer['avg']); ?>
+              </td>
+              <td>
+                <?php echo $timer['count']; ?>
+              </td>
+            </tr>
+          <?php endforeach ?>
+        <?php endif ?>
+      </tbody>
+    </table>
+ </div>
+</div>
+
+<script>
+  require([
+    'jquery',
+    'Mgt_DeveloperToolbar/js/treegrid'
+  ], function ($) {
+    $('#profiler-grid').treegrid({
+      'initialState': 'collapsed'
+    });
+  });
+</script>

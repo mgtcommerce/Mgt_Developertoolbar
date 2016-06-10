@@ -1,0 +1,32 @@
+<?php 
+
+$urlBuilder = $this->getUrlBuilder();
+$profiler = $this->getProfiler();
+$totalElapsedSecs = number_format($this->getTotalElapsedSecs(), 3);
+$totalNumberOfQueries = (int)$this->getTotalNumQueries();
+$token = $this->getToken();
+
+?>
+
+<div class="mgt-developer-toolbar-block mgt-developer-toolbar-block-database-queries">
+  <a href="<?php echo $urlBuilder->getUrl('mgtdevelopertoolbar/toolbar/container/execute', ['block' => 'database', 'token' => $token]); ?>">
+    <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" xml:space="preserve">
+      <path d="
+        M10,0.856c-4.511,0-8.182,1.795-8.182,4.001v10.287c0,2.206,3.67,4.001,8.182,4.001
+        c4.511,0,8.182-1.795,8.182-4.001V4.856C18.182,2.651,14.511,0.856,10,0.856z M10,2.57c4.241,0,6.428,1.602,6.428,2.286
+        c0,0.684-2.187,2.286-6.428,2.286c-4.241,0-6.428-1.602-6.428-2.286C3.572,4.173,5.759,2.57,10,2.57z M16.428,15.144
+        c0,0.684-2.187,2.286-6.428,2.286c-4.241,0-6.428-1.602-6.428-2.286v-2.677c1.499,0.932,3.821,1.534,6.428,1.534
+        c2.608,0,4.929-0.602,6.428-1.534V15.144z M10,12.286c-4.241,0-6.428-1.602-6.428-2.286V7.323C5.071,8.255,7.392,8.857,10,8.857
+        c2.608,0,4.929-0.602,6.428-1.534V10C16.428,10.684,14.241,12.286,10,12.286z">
+      </path>
+    </svg>
+    <span><?php echo $totalNumberOfQueries; ?> q / <?php echo $totalElapsedSecs; ?> s</span>
+  </a>
+  <div class="mgt-developer-toolbar-block-information" style="display:none;">
+    <ul>
+      <li>
+         <strong><?php echo __('Database Queries') ?>:</strong> <?php echo $totalNumberOfQueries; ?> in <?php echo $totalElapsedSecs; ?> s
+      </li>
+    </ul>
+  </div>
+</div>

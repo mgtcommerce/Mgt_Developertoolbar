@@ -1,0 +1,49 @@
+<?php 
+
+$events = $this->getEvents();
+
+?>
+
+<div class="mgt-developer-toolbar-sidebar-blocks">
+  <div class="container">
+    <div class="mgt-developer-toolbar-sidebar-events">
+      <h2><?php echo __('Events / Observers'); ?></h2>
+      <table cellspacing="0" cellpadding="0" class="data-table">
+        <thead>
+          <tr>
+            <th width="100%">
+              <?php echo __('Event'); ?>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($events as $eventName => $observers): ?>
+            <tr>
+              <td>
+                <a class="mgt-developer-toolbar-sidebar-event" href="javascript:void(0);"><?php echo $eventName; ?> (<?php echo count($observers); ?>)</a>
+                <?php if (count($observers)): ?>
+                  <ul class="observers" style="display:none;">
+                    <?php foreach ($observers as $observer): ?>
+                      <li>
+                        <strong><?php echo __('Name'); ?>:</strong> <?php echo $observer['name'] ?> <br>
+                        <strong><?php echo __('Class'); ?>:</strong> <?php echo $observer['instance'] ?>
+                      </li>
+                    <?php endforeach ?>
+                  </ul>
+                <?php endif ?>
+              </td>
+            </tr>
+          <?php endforeach ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  require([
+    'jquery',
+    'Mgt_DeveloperToolbar/js/events'
+  ], function ($) {
+  });
+</script>

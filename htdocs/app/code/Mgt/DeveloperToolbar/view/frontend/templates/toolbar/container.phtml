@@ -1,0 +1,27 @@
+<?php 
+
+$currentUrl = $block->getCurrentUrl();
+$controllerModule = $block->getControllerModule();
+$controllerClassName = $block->getControllerClassName();
+$controllerActionName = $block->getControllerActionName();
+$sidebarBlock = $block->getChildBlock('mgt_developer_toolbar_container_sidebar');
+
+?>
+
+<div class="mgt-developer-toolbar-container-summary">
+  <div class="container">
+     <h2><a href="<?php echo $currentUrl; ?>"><?php echo $currentUrl; ?></a></h2>
+     <ul>
+       <li><?php echo __('Controller Module');?>: <strong><?php echo $controllerModule; ?></strong></li>
+       <li><?php echo __('Controller Class');?>: <strong><?php echo $controllerClassName; ?></strong></li>
+       <li><?php echo __('Controller Action Name');?>: <strong><?php echo $controllerActionName; ?></strong></li>
+     </ul>
+  </div>
+</div>
+
+<div class="mgt-developer-toolbar-container-content clearfix">
+  <?php echo $this->getChildHtml('mgt_developer_toolbar_container_sidebar'); ?>
+  <div class="mgt-developer-toolbar-container-collector-content">
+     <?php echo $sidebarBlock->getChildHtml($sidebarBlock->getActiveBlock()); ?>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<?php 
+
+$plugins = $this->getPlugins();
+
+?>
+
+<div class="mgt-developer-toolbar-sidebar-blocks">
+  <div class="container">
+    <div class="mgt-developer-toolbar-sidebar-plugins">
+      <h2><?php echo __('Plugins'); ?></h2>
+      <table cellspacing="0" cellpadding="0" class="data-table">
+        <thead>
+          <tr>
+            <th width="100%">
+              <?php echo __('Class'); ?>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($plugins as $pluginClass => $listeners): ?>
+            <tr>
+              <td>
+                <a class="mgt-developer-toolbar-sidebar-plugin-class" href="javascript:void(0);"><?php echo $pluginClass; ?> (<?php echo count($listeners); ?>)</a>
+                <?php if (count($listeners)): ?>
+                  <ul class="plugins" style="display:none;">
+                    <?php foreach ($listeners as $listener): ?>
+                      <li>
+                        <strong><?php echo __('Name'); ?>:</strong> <?php echo $listener['name']; ?> <br>
+                        <strong><?php echo __('Listener'); ?>:</strong> <?php echo $listener['listener']; ?> <br>
+                        <strong><?php echo __('Class'); ?>:</strong> <?php echo $listener['className']; ?>
+                      </li>
+                    <?php endforeach ?>
+                  </ul>
+                <?php endif ?>
+              </td>
+            </tr>
+          <?php endforeach ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  require([
+    'jquery',
+    'Mgt_DeveloperToolbar/js/plugins'
+  ], function ($) {
+  });
+</script>
