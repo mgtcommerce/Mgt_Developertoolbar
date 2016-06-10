@@ -23,6 +23,7 @@ namespace Mgt\DeveloperToolbar\Block;
 
 use Magento\Framework\Url;
 use Magento\Framework\HTTP\PhpEnvironment\RemoteAddress;
+use Magento\Framework\App\ProductMetadataInterface;
 
 class Context extends \Magento\Framework\View\Element\Template\Context
 {
@@ -51,6 +52,11 @@ class Context extends \Magento\Framework\View\Element\Template\Context
      */
     protected $remoteAddress;
 
+    /**
+     * @var \Magento\Framework\App\ProductMetadataInterface
+     */
+    protected $productMetaData;
+    
     /**
      * @param \Magento\Framework\App\RequestInterface $request
      * @param \Magento\Framework\View\LayoutInterface $layout
@@ -81,6 +87,7 @@ class Context extends \Magento\Framework\View\Element\Template\Context
      * @param \Mgt\DeveloperToolbar\Model\Config $config
      * @param \Magento\Framework\Url $url
      * @param \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $remoteAddress
+     * @param \Magento\Framework\App\ProductMetadataInterface $productMetaData
      * @SuppressWarnings(PHPMD.ExcessiveParameterList)
      */
     public function __construct(
@@ -111,12 +118,14 @@ class Context extends \Magento\Framework\View\Element\Template\Context
         \Magento\Framework\View\Element\Template\File\Validator $validator,
         \Mgt\DeveloperToolbar\Model\Config $config,
         \Magento\Framework\Url $url,
-        \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $remoteAddress
+        \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $remoteAddress,
+        \Magento\Framework\App\ProductMetadataInterface $productMetaData
     ) {
         $this->config = $config;
         $this->request = $request;
         $this->url = $url;
         $this->remoteAddress = $remoteAddress;
+        $this->productMetaData = $productMetaData;
        parent::__construct(
             $request,
             $layout,
@@ -177,5 +186,10 @@ class Context extends \Magento\Framework\View\Element\Template\Context
     public function getRemoteAddress()
     {
         return $this->remoteAddress;
+    }
+    
+    public function getProductMetaData()
+    {
+        return $this->productMetaData;
     }
 }

@@ -37,12 +37,18 @@ class Base extends Template
     protected $urlBuilder;
     
     /**
+     * @var \Magento\Framework\App\ProductMetadataInterface
+     */
+    protected $productMetaData;
+    
+    /**
      * @param Context $context
      */
     public function __construct(
         Context $context
     ) {
         $this->urlBuilder = $context->getUrl();
+        $this->productMetaData = $context->getProductMetaData();
         parent::__construct($context);
     }
     
@@ -59,5 +65,10 @@ class Base extends Template
     public function getUrlBuilder()
     {
         return $this->urlBuilder;
+    }
+    
+    public function getProductMetaData()
+    {
+        return $this->productMetaData;
     }
 }

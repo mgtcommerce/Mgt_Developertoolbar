@@ -71,6 +71,11 @@ class Dashboard extends Block
     protected $areaCode;
     
     /**
+     * @var \Magento\Framework\App\ProductMetadataInterface
+     */
+    protected $productMetaData;
+    
+    /**
      * @param Context $context
      * @param ModuleList $moduleList
      */
@@ -85,6 +90,7 @@ class Dashboard extends Block
         $this->fullModuleList = $fullModuleList;
         $this->sessionConfig = $sessionConfig;
         $this->resourceConnection = $resourceConnection;
+        $this->productMetaData = $context->getProductMetaData();
         parent::__construct($context);
     }
     
@@ -132,7 +138,9 @@ class Dashboard extends Block
     
     public function getMagentoVersion()
     {
-        return \Magento\Framework\AppInterface::VERSION;
+        $productMetaData = $this->getProductMetaData();
+        $magentoVersion = $productMetaData->getVersion();
+        return $magentoVersion;
     }
     
     public function getSessionSaveHandler()
@@ -180,5 +188,10 @@ class Dashboard extends Block
         $mysqlVersion = $readConnection->query('select version()')->fetchColumn();
         $mysqlVersion = mb_substr($mysqlVersion, 0, 6);
         return $mysqlVersion;
+    }
+    
+    public function getProductMetaData()
+    {
+        return $this->productMetaData;
     }
 }

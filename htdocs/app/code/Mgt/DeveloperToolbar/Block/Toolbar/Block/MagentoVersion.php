@@ -25,6 +25,8 @@ class MagentoVersion extends Base
 {
     public function getMagentoVersion()
     {
-        return \Magento\Framework\AppInterface::VERSION;
+        $productMetaData = $this->getProductMetaData();
+        $magentoVersion = $productMetaData->getVersion();
+        return $magentoVersion;
     }
 }

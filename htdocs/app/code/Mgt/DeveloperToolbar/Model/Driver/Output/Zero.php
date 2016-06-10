@@ -33,6 +33,7 @@ class Zero implements OutputInterface
     
     public function display(Stat $stat)
     {
+        //return;
         $objectManager = ObjectManager::getInstance();
         $registry = $objectManager->get('\Magento\Framework\Registry');
         $config = $objectManager->get('\Mgt\DeveloperToolbar\Model\Config');
