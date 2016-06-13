@@ -1,46 +1,76 @@
 define([
-    'jquery',
-    'jquery/jquery-storageapi'
+    'jquery'
 ], function ($) {
     'use strict';
 
+    var Cookie = {
+        all: function() {
+            var pairs = document.cookie.split(';');
+            var cookies = {};
+            $.each(pairs, function(key, value) {
+                var value = $.trim(value);
+                var pair = value.split('=');
+                cookies[unescape(pair[0])] = unescape(pair[1]);
+            });
+            return cookies;
+        },
+        read: function(cookieName) {
+            var cookies = this.all();
+            if(cookies[cookieName]) {
+                return cookies[cookieName];
+            }
+            return null;
+        },
+        write: function(cookieName, cookieValue, cookieLifeTime) {
+            var expires = '';
+            if (cookieLifeTime) {
+                var date = new Date();
+                date.setTime(date.getTime()+(cookieLifeTime*1000));
+                expires = '; expires='+date.toGMTString();
+            }
+            var urlPath = '/';
+            document.cookie = escape(cookieName) + "=" + escape(cookieValue) + expires + "; path=" + urlPath;
+        },
+        clear: function(cookieName) {
+            this.write(cookieName, '', -1);
+        }
+    };
+    
     var toolbar = $('#mgt-developer-toolbar');
     var toolbarBlocksContainer = $('#mgt-developer-toolbar-blocks');
-    
-    $.cookieStorage.setConf({path:'/'});
 
     function toggleToolbar(init) {
         
-        var toolbarCookieValue = $.cookieStorage.get('mgt-developer-toolbar');
-        var isCollapsible = $(toolbar).attr('data-collapsible');
+        var toolbarCookieValue = Cookie.read('mgt-developer-toolbar');
+        var isCollapsible = $(toolbar).attr('data-collapsible'); 
         
         if (isCollapsible == 1) {
             
             if (init == true) {
               
               if (!toolbarCookieValue) {
-                $.cookieStorage.set('mgt-developer-toolbar', 'open');
+                  Cookie.write('mgt-developer-toolbar', 'open');
               }
               
               if (toolbarCookieValue == 'open') {
-                  $.cookieStorage.set('mgt-developer-toolbar', 'open');
+                  Cookie.write('mgt-developer-toolbar', 'open');
                   toolbar.css('width', '100%');
                   toolbarBlocksContainer.show();
               } 
 
               if (toolbarCookieValue == 'closed') {
-                  $.cookieStorage.set('mgt-developer-toolbar', 'closed');
+                  Cookie.write('mgt-developer-toolbar', 'closed');
                   toolbar.css('width', '50px');
                   toolbarBlocksContainer.hide();
               }
               
             } else {
               if (toolbarCookieValue == 'open') {
-                  $.cookieStorage.set('mgt-developer-toolbar', 'closed');
+                  Cookie.write('mgt-developer-toolbar', 'closed');
                   toolbar.css('width', '50px');
                   toolbarBlocksContainer.hide();
               } else {
-                  $.cookieStorage.set('mgt-developer-toolbar', 'open');
+                  Cookie.write('mgt-developer-toolbar', 'open');
                   toolbar.css('width', '100%');
                   toolbarBlocksContainer.show();
               }
@@ -48,7 +78,7 @@ define([
            
             toolbar.show();
         } else {
-            $.cookieStorage.set('mgt-developer-toolbar', 'open');
+            Cookie.write('mgt-developer-toolbar', 'open');
             toolbar.css('width', '100%');
             toolbarBlocksContainer.show();
             toolbar.show();
