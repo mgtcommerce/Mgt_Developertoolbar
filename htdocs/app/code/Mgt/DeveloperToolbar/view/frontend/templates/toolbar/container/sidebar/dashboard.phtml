@@ -4,6 +4,7 @@ $formatHelper = $this->helper('Mgt\DeveloperToolbar\Helper\Format');
 
 $mode = $this->getMode();
 $magentoVersion = $this->getMagentoVersion();
+$cacheStorage = $this->getCacheStorage();
 $areaCode = $this->getAreaCode();
 $sessionSaveHandler = $this->getSessionSaveHandler();
 $phpVersion = $this->getPhpVersion();
@@ -25,15 +26,15 @@ $modules = $this->getModules();
         <span class="value"><?php echo $magentoVersion; ?></span>
         <span class="label"><?php echo __('Magento Version'); ?></span>
       </div>
-    
-      <div class="mgt-developer-toolbar-sidebar-metric">
-        <span class="value"><?php echo $mode; ?></span>
-        <span class="label"><?php echo __('Mode'); ?></span>
-      </div>
 
       <div class="mgt-developer-toolbar-sidebar-metric">
         <span class="value"><?php echo $areaCode; ?></span>
         <span class="label"><?php echo __('Area'); ?></span>
+      </div>
+      
+      <div class="mgt-developer-toolbar-sidebar-metric">
+        <span class="value"><?php echo $cacheStorage; ?></span>
+        <span class="label"><?php echo __('Cache Storage'); ?></span>
       </div>
     
       <div class="mgt-developer-toolbar-sidebar-metric">

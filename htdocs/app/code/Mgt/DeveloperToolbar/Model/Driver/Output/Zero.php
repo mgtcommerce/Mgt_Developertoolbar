@@ -33,7 +33,6 @@ class Zero implements OutputInterface
     
     public function display(Stat $stat)
     {
-        //return;
         $objectManager = ObjectManager::getInstance();
         $registry = $objectManager->get('\Magento\Framework\Registry');
         $config = $objectManager->get('\Mgt\DeveloperToolbar\Model\Config');
@@ -62,17 +61,19 @@ class Zero implements OutputInterface
             $resourceConnection = $objectManager->get('\Magento\Framework\App\ResourceConnection');
             $readConnection = $resourceConnection->getConnection('read');
             $dbProfiler = $readConnection->getProfiler();
-            $queryProfiles = (array)$dbProfiler->getQueryProfiles();
+            $queryProfiles = $dbProfiler->getQueryProfiles();
             $queries = array();
             
-            foreach ($queryProfiles as $queryProfile) {
-                $queries[] = [
-                   'query' => $queryProfile->getQuery(),
-                   'type'  => $queryProfile->getQueryType(),
-                   'time'  => $queryProfile->getElapsedSecs()
-                ];
+            if ($queryProfiles && count($queryProfiles)) {
+                foreach ($queryProfiles as $queryProfile) {
+                    $queries[] = [
+                        'query' => $queryProfile->getQuery(),
+                        'type'  => $queryProfile->getQueryType(),
+                        'time'  => $queryProfile->getElapsedSecs()
+                    ];
+                }
             }
-            
+
             $cacheId = sprintf('%s_%s', self::CACHE_ID_QUERIES_PREFIX, $token);
             $cache->save(serialize($queries), $cacheId, [self::CACHE_TAG]);
         }

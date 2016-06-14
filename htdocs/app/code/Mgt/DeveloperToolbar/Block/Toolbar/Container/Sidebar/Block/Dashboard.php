@@ -25,6 +25,7 @@ use Magento\Framework\Module\ModuleList;
 use Magento\Framework\Module\FullModuleList;
 use Magento\Framework\Session\Config as SessionConfig;
 use Magento\Framework\App\ResourceConnection;
+use Magento\Framework\App\CacheInterface as Cache;
 
 use Mgt\DeveloperToolbar\Block\Context;
 use Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block;
@@ -76,6 +77,11 @@ class Dashboard extends Block
     protected $productMetaData;
     
     /**
+     * @var \Magento\Framework\App\CacheInterface
+     */
+    protected $cache;
+
+    /**
      * @param Context $context
      * @param ModuleList $moduleList
      */
@@ -84,13 +90,15 @@ class Dashboard extends Block
         ModuleList $moduleList,
         FullModuleList $fullModuleList,
         SessionConfig $sessionConfig,
-        ResourceConnection $resourceConnection
+        ResourceConnection $resourceConnection,
+        Cache $cache
     ) {
         $this->moduleList = $moduleList;
         $this->fullModuleList = $fullModuleList;
         $this->sessionConfig = $sessionConfig;
         $this->resourceConnection = $resourceConnection;
         $this->productMetaData = $context->getProductMetaData();
+        $this->cache = $cache;
         parent::__construct($context);
     }
     
@@ -148,6 +156,15 @@ class Dashboard extends Block
         $sessionConfigOptions = $this->sessionConfig->getOptions();
         $sessionSaveHandler = isset($sessionConfigOptions['session.save_handler']) ? $sessionConfigOptions['session.save_handler'] : '';
         return $sessionSaveHandler;
+    }
+    
+    public function getCacheStorage()
+    {
+        $cacheFrontend = $this->cache->getFrontend();
+        $cacheBackend = $cacheFrontend->getBackend();
+        $cacheStorage = explode('_', get_class($cacheBackend));
+        $cacheStorage = end($cacheStorage);
+        return $cacheStorage;
     }
     
     public function getPhpVersion()
