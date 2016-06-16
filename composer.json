@@ -2,17 +2,17 @@
   "name": "mgtcommerce/module-mgtdevelopertoolbar",
   "description": "Mgt Developer Toolbar",
   "require": {
-    "php": "~5.6.0|~7.0.0"
+    "php": "~5.6.0|~7.0.0",
+    "magento/framework": "~100.0",
+    "magento/module-catalog": "~100.0"
   },
   "type": "magento2-module",
-  "version": "101.0.0-rc2",
+  "version": "1.0.0",
   "license": [
     "proprietary"
   ],
   "autoload": {
-    "files": [
-      "htdocs/app/code/Mgt/DeveloperToolbar/registration.php"
-    ],
+    "files": [ "registration.php" ],
     "psr-4": {
       "Mgt\\DeveloperToolbar\\": ""
     }
