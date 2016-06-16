@@ -14,7 +14,7 @@
       "htdocs/app/code/Mgt/DeveloperToolbar/registration.php"
     ],
     "psr-4": {
-      "Mgt\\DeveloperToolbar\\": "htdocs/app/code/Mgt/DeveloperToolbar"
+      "Mgt\\DeveloperToolbar\\": ""
     }
   }
 }
