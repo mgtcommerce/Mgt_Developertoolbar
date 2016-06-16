@@ -2,10 +2,7 @@
   "name": "mgtcommerce/module-mgtdevelopertoolbar",
   "description": "Mgt Developer Toolbar",
   "require": {
-    "php": "~5.6.0|~7.0.0",
-    "magento/module-store": "100.0.*",
-    "magento/module-backend": "100.0.*",
-    "magento/framework": "100.0.*"
+    "php": "~5.6.0|~7.0.0"
   },
   "type": "magento2-module",
   "version": "101.0.0-rc2",
