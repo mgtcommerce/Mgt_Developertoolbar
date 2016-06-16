@@ -1,0 +1,31 @@
+<?php
+
+$urlBuilder = $this->getUrlBuilder();
+$phpParseTime = $this->getPhpParseTime();
+$token = $this->getToken();
+
+?>
+
+<div class="mgt-developer-toolbar-block mgt-developer-toolbar-block-php-parsetime">
+  <a href="<?php echo $urlBuilder->getUrl('mgtdevelopertoolbar/toolbar/container/execute', ['block' => 'profiler', 'token' => $token]); ?>">
+    <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" xml:space="preserve">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.653,3.93l-0.431,0.425c1.491,1.673,2.404,3.859,2.404,6.257
+        c0,5.235-4.318,9.494-9.625,9.494c-5.308,0-9.625-4.259-9.625-9.494c0-4.719,3.512-8.633,8.091-9.361
+        C8.554,0.488,9.203-0.107,10-0.107s1.446,0.595,1.535,1.358c1.825,0.29,3.477,1.084,4.808,2.238l0.431-0.425l-0.875-0.863
+        l1.098-1.083l2.628,2.592l-1.098,1.083L17.653,3.93z M10,2.956c-4.28,0-7.763,3.435-7.763,7.657S5.72,18.269,10,18.269
+        c4.28,0,7.763-3.435,7.763-7.657S14.28,2.956,10,2.956z M10.932,11.831v1.232c0,0.507-0.417,0.919-0.932,0.919
+        c-0.514,0-0.932-0.412-0.932-0.919v-1.232c-0.375-0.279-0.621-0.718-0.621-1.218c0-0.5,0.246-0.939,0.621-1.218V5.712
+        c0-0.507,0.417-0.919,0.932-0.919c0.515,0,0.932,0.411,0.932,0.919v3.682c0.375,0.279,0.621,0.718,0.621,1.218
+        C11.552,11.113,11.306,11.552,10.932,11.831z">
+      </path>
+    </svg>
+    <span><?php echo $phpParseTime; ?> s</span>
+  </a>  
+  <div class="mgt-developer-toolbar-block-information" style="display:none;">
+    <ul>
+      <li>
+         <strong><?php echo __('PHP Parse Time') ?>:</strong> <?php echo $phpParseTime; ?> s
+      </li>
+    </ul>
+  </div>
+</div>

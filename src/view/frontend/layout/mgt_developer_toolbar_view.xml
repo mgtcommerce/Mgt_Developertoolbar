@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<page layout="empty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+         <remove src="css/style.css" />
+         <remove src="css/styles-m.css" />
+         <remove src="css/styles-l.css" />
+         <remove src="css/print.css" />
+         <css src="Mgt_DeveloperToolbar::css/jquery.treegrid.css"/>
+         <css src="Mgt_DeveloperToolbar::css/highlightjs.github.css"/>
+         <link src="Mgt_DeveloperToolbar::js/highlight.min.js"/>
+         <title>Mgt Developer Toolbar</title>
+    </head>
+    <body>
+        <referenceContainer name="main.content" htmlTag="div" htmlId="mgt-developer-toolbar-container" htmlClass="mgt-developer-toolbar-container" />
+        <referenceContainer name="content">
+            <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container" name="mgt_developer_toolbar_container" template="toolbar/container.phtml">
+                <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar" name="mgt_developer_toolbar_container_sidebar" template="toolbar/container/sidebar.phtml">
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Dashboard" name="dashboard" template="toolbar/container/sidebar/dashboard.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Request" name="request" template="toolbar/container/sidebar/request.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Profiler" name="profiler" template="toolbar/container/sidebar/profiler.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Database" name="database" template="toolbar/container/sidebar/database.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Blocks" name="blocks" template="toolbar/container/sidebar/blocks.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Handles" name="handles" template="toolbar/container/sidebar/handles.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Events" name="events" template="toolbar/container/sidebar/events.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Plugins" name="plugins" template="toolbar/container/sidebar/plugins.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Preferences" name="preferences" template="toolbar/container/sidebar/preferences.phtml"/>
+                    <block class="Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block\Phpinfo" name="phpinfo" template="toolbar/container/sidebar/phpinfo.phtml"/>
+                </block>
+            </block>
+        </referenceContainer> 
+        <referenceContainer name="page.main.title" remove="true"/>
+        <referenceContainer name="authentication-popup" remove="true"/>
+        <referenceContainer name="page.messages" remove="true"/>
+        <referenceContainer name="copyright" remove="true"/>
+        <referenceContainer name="mgt_developer_toolbar">
+            <block class="Mgt\DeveloperToolbar\Block\Toolbar\Link\ReturnToSite" name="mgt_developer_toolbar_return_to_site" template="link/return_to_site.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

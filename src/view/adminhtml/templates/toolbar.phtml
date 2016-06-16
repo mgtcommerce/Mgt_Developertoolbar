@@ -1,0 +1,24 @@
+<?php
+
+$canShow = $this->canShow();
+$isCollapsible = $this->isCollapsible();
+
+?>
+
+<?php if (true === $canShow): ?>
+
+<div id="mgt-developer-toolbar" class="clearfix" data-collapsible="<?php echo (true === $isCollapsible ? '1' : '0'); ?>" style="display:<?php echo (true === $isCollapsible ? 'none' : 'block'); ?>;">
+  <div class="mgt-developer-toolbar-logo">
+    <img src="<?php echo $this->getViewFileUrl('Mgt_DeveloperToolbar::images/logo.png'); ?>" height="35" width="35" alt="Mgt Developer Toolbar" />
+  </div>
+  <div id="mgt-developer-toolbar-blocks" class="mgt-developer-toolbar-blocks clearfix">
+    <?php echo $this->getChildHtml('mgt_developer_toolbar_blocks'); ?>
+  </div>
+  <?php echo $this->getChildHtml('mgt_developer_toolbar_return_to_site'); ?>
+</div>
+
+<script type="text/javascript">
+    require(['jquery', 'mgtdevelopertoolbar'],function($){});
+</script>
+
+<?php endif ?>

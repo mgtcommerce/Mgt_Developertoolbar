@@ -13,7 +13,7 @@
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
-      "Mgt\\DeveloperToolbar\\": "htdocs"
+      "Mgt\\DeveloperToolbar\\": "src"
     }
   }
 }

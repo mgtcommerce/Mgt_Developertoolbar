@@ -1,0 +1,156 @@
+<?php 
+
+$queries = $this->getQueries();
+$insertQueries = $this->getQueriesByType($block::QUERY_TYPE_INSERT);
+$updateQueries = $this->getQueriesByType($block::QUERY_TYPE_UPDATE);
+$readQueries = $this->getQueriesByType($block::QUERY_TYPE_SELECT);
+$deleteQueries = $this->getQueriesByType($block::QUERY_TYPE_DELETE);
+$transactions = $this->getQueriesByType($block::QUERY_TYPE_TRANSACTION);
+
+$slowestQueries = $this->getSlowestQueries();
+
+$totalNumberOfQueries = $this->getTotalNumberOfQueries();
+$totalElapsedSecs = number_format($this->getTotalElapsedSecs(), 3);
+
+?>
+
+<?php if (count($queries)): ?>
+
+<div class="mgt-developer-toolbar-sidebar-database-queries">
+  <h2><?php echo __('Database Queries'); ?></h2>
+  
+  <table cellspacing="0" cellpadding="0" class="data-table">
+    <thead>
+      <tr>
+        <th width="20%">
+          <?php echo __('Name'); ?>
+        </th>
+        <th width="80%">
+          <?php echo __('Value'); ?>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong><?php echo __('Executed'); ?></strong>
+        </td>
+        <td>
+          <?php echo $totalNumberOfQueries; ?> queries in <?php echo $totalElapsedSecs; ?> s
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong><?php echo __('Total Queries'); ?></strong>
+        </td>
+        <td>
+          <?php echo $totalNumberOfQueries; ?>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong><?php echo __('Insert queries'); ?></strong>
+        </td>
+        <td>
+          <?php echo count($insertQueries); ?>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong><?php echo __('Update queries'); ?></strong>
+        </td>
+        <td>
+          <?php echo count($updateQueries); ?>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong><?php echo __('Read queries'); ?></strong>
+        </td>
+        <td>
+          <?php echo count($readQueries); ?>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong><?php echo __('Delete queries'); ?></strong>
+        </td>
+        <td>
+          <?php echo count($deleteQueries); ?>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong><?php echo __('Transactions'); ?></strong>
+        </td>
+        <td>
+          <?php echo count($transactions); ?>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h3><?php echo __('Top 5 - Slowest Queries'); ?></h3>
+  
+  <table cellspacing="0" cellpadding="0" class="data-table">
+    <thead>
+      <tr>
+        <th width="90%">
+          <?php echo __('Query'); ?>
+        </th>
+        <th width="10%">
+          <?php echo __('Time (ms)'); ?>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($slowestQueries as $query): ?>
+        <tr>
+          <td>
+            <pre>
+              <code class="sql"><?php echo $query['query']; ?></code>
+            </pre>
+          </td>
+          <td>
+            <?php echo round($query['time'], 8); ?>
+          </td>
+        </tr>
+      <?php endforeach ?>
+    </tbody>
+  </table>
+  
+  <h3><?php echo __('All Queries'); ?></h3>
+  
+  <table cellspacing="0" cellpadding="0" class="data-table">
+    <thead>
+      <tr>
+        <th width="90%">
+          <?php echo __('Query'); ?>
+        </th>
+        <th width="10%">
+          <?php echo __('Time (ms)'); ?>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($queries as $query): ?>
+        <tr>
+          <td>
+            <pre>
+              <code class="sql"><?php echo $query['query']; ?></code>
+            </pre>
+          </td>
+          <td>
+            <?php echo round($query['time'], 8); ?>
+          </td>
+        </tr>
+      <?php endforeach ?>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+<?php endif ?>
