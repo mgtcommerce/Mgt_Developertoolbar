@@ -11,7 +11,7 @@
     "proprietary"
   ],
   "autoload": {
-    "files": [ "registration.php" ],
+    "files": [ "src/registration.php" ],
     "psr-4": {
       "Mgt\\DeveloperToolbar\\": "src"
     }
