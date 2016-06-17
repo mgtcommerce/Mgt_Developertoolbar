@@ -298,9 +298,17 @@ class DataCollector implements ObserverInterface
     protected function getPreferences()
     {
         $reflectionClass = new \ReflectionClass($this->objectManagerConfig);
-        $preferencesProperty = $reflectionClass->getProperty('_preferences');
-        $preferencesProperty->setAccessible(true);
-        $preferences = $preferencesProperty->getValue($this->objectManagerConfig);
+        $preferences = [];
+        if ($this->objectManagerConfig instanceof \Magento\Framework\Interception\ObjectManager\Config\Compiled) {
+            $parentClass = $reflectionClass->getParentClass();
+            $preferencesProperty = $parentClass->getProperty('preferences');
+            $preferencesProperty->setAccessible(true);
+            $preferences = $preferencesProperty->getValue($this->objectManagerConfig);
+        } else {
+            $preferencesProperty = $reflectionClass->getProperty('_preferences');
+            $preferencesProperty->setAccessible(true);
+            $preferences = $preferencesProperty->getValue($this->objectManagerConfig);
+        }
         return $preferences;
     }
     
