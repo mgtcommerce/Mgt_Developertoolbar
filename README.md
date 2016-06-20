@@ -46,3 +46,7 @@ php bin/magento setup:static-content:deploy
 To enable / disable the toolbar go to Stores --> Configuration --> MGT-COMMERCE.COM --> Developer Toolbar
 
 ![Enable Mgt Developer Toolbar](doc/static_files/enable_toolbar.png "Enable Mgt Developer Toolbar")
+
+Make sure to have the Full Page Caching (FPC) disabled otherwise the toolbar will not work
+
+![Disable FPC](doc/static_files/disable_fpc.png "Disable FPC")
