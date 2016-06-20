@@ -1,6 +1,7 @@
-# Developer Toolbar for Magento 2 #
+Developer Toolbar for Magento 2
+============================
 
-## Installation
+## Installation with Composer
 
 * Connect to your server with SSH
 * Navigation to your project and run these commands
