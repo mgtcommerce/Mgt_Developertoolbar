@@ -1,4 +1,4 @@
-# Mgt DeveloperToolbar for Magento 2 #
+# Developer Toolbar for Magento 2 #
 
 ## Installation
 
