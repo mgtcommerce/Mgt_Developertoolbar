@@ -37,3 +37,10 @@ rm -rf var/view_preprocessed/*
 
 php bin/magento setup:static-content:deploy
 ```
+
+## Installation without Composer
+
+
+## Usage
+
+![Enable Mgt Developer Toolbar](doc/static_files/enable_toolbar.png "Enable Mgt Developer Toolbar")
