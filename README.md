@@ -40,6 +40,8 @@ php bin/magento setup:static-content:deploy
 
 ## Installation without Composer
 
+* Download the files from github: https://github.com/mgtcommerce/Mgt_Developertoolbar/archive/master.zip
+
 
 ## Usage
 
