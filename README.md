@@ -62,3 +62,17 @@ To enable / disable the toolbar go to Stores --> Configuration --> MGT-COMMERCE.
 Make sure to have the Full Page Caching (FPC) disabled otherwise the toolbar will not work
 
 ![Disable FPC](doc/static_files/disable_fpc.png "Disable FPC")
+
+## Screenshots
+
+Dashboard
+
+![Dashboard](doc/static_files/dashboard.png "Dashboard")
+
+Profiler
+
+![Profiler](doc/static_files/profiler.png "Profiler")
+
+Database Queries
+
+![Database Queries](doc/static_files/database_queries.png "Database Queries")
