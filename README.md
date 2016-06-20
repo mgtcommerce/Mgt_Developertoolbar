@@ -24,9 +24,10 @@ The toolbar shows you all important information for performance optimisation and
 
 ## Installation with Composer
 
-* 1) Connect to your server with SSH
-* 2) Navigation to your project and run these commands
-
+* Connect to your server with SSH
+* Navigation to your project and run these commands
+ 
+```bash
 composer config repositories.mgt-developertoolbar vcs https://github.com/mgtcommerce/Mgt_Developertoolbar.git
-
 composer require mgtcommerce/module-mgtdevelopertoolbar:dev-master
+```
