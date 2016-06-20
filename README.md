@@ -80,3 +80,6 @@ Database Queries
 Nested Blocks
 
 ![Nested Blocks](doc/static_files/blocks.png "Nested Blocks")
+
+## Licence
+[Open Software License (OSL 3.0)](http://opensource.org/licenses/osl-3.0.php)
