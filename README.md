@@ -8,7 +8,7 @@ The toolbar shows you all important information for performance optimisation and
 
 ## Main Features
 
-* PHP Parse Time / Profiler
+* Profiler
 * Memory Consumption
 * List of all Database Queries
 * Block nesting
@@ -76,3 +76,7 @@ Profiler
 Database Queries
 
 ![Database Queries](doc/static_files/database_queries.png "Database Queries")
+
+Nested Blocks
+
+![Nested Blocks](doc/static_files/nested_blocks.png "Nested Blocks")
