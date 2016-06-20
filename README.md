@@ -1,7 +1,7 @@
-Developer Toolbar for Magento 2
+Mgt Developer Toolbar for Magento 2
 ============================
 
-The MGT Developer Toolbar is a must have for Magento 2 developers and frontend guys.
+The Mgt Developer Toolbar is a must have for Magento 2 developers and frontend guys.
 The toolbar shows you all important information for performance optimisation and module development.
 
 ![Mgt Developer Toolbar](doc/static_files/mgt_developer_toolbar.png "Mgt Developer Toolbar")
