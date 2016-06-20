@@ -12,8 +12,8 @@ The toolbar shows you all important information for performance optimisation and
 * Memory Consumption
 * List of all Database Queries
 * Block nesting
-* Cache storage information
-* Session storage information
+* Cache Storage Information
+* Session Storage Information
 * Enabled / Disabled Modules
 * Request / Response Data
 * Handles
@@ -24,8 +24,8 @@ The toolbar shows you all important information for performance optimisation and
 
 ## Installation with Composer
 
-* Connect to your server with SSH
-* Navigation to your project and run these commands
+* 1) Connect to your server with SSH
+* 2) Navigation to your project and run these commands
 
 composer config repositories.mgt-developertoolbar vcs https://github.com/mgtcommerce/Mgt_Developertoolbar.git
 
