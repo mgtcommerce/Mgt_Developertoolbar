@@ -41,6 +41,16 @@ php bin/magento setup:static-content:deploy
 ## Installation without Composer
 
 * Download the files from github: https://github.com/mgtcommerce/Mgt_Developertoolbar/archive/master.zip
+* Extract archive and copy all directories from src/app/code/ to app/code/
+* Go to project home directory and execute these commands
+
+```bash
+php bin/magento setup:upgrade
+rm -rf pub/static/* 
+rm -rf var/view_preprocessed/*
+
+php bin/magento setup:static-content:deploy
+```
 
 
 ## Usage
