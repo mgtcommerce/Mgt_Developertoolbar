@@ -30,4 +30,10 @@ The toolbar shows you all important information for performance optimisation and
 ```bash
 composer config repositories.mgt-developertoolbar vcs https://github.com/mgtcommerce/Mgt_Developertoolbar.git
 composer require mgtcommerce/module-mgtdevelopertoolbar:dev-master
+
+php bin/magento setup:upgrade
+rm -rf pub/static/* 
+rm -rf var/view_preprocessed/*
+
+php bin/magento setup:static-content:deploy
 ```
