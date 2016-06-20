@@ -4,6 +4,8 @@ Developer Toolbar for Magento 2
 The MGT Developer Toolbar is a must have for Magento 2 developers and frontend guys.
 The toolbar shows you all important information for performance optimisation and module development.
 
+![Mgt Developer Toolbar](doc/static_files/mgt_developer_toolbar.png "Mgt Developer Toolbar")
+
 ## Main Features
 
 * PHP Parse Time / Profiler
@@ -19,8 +21,6 @@ The toolbar shows you all important information for performance optimisation and
 * Plugins
 * Preferences
 * PHP-Info
-
-![Mgt Developer Toolbar](doc/static_files/mgt_developer_toolbar.png "Mgt Developer Toolbar")
 
 ## Installation with Composer
 
