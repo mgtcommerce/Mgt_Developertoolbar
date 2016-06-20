@@ -20,6 +20,7 @@ The toolbar shows you all important information for performance optimisation and
 * Preferences
 * PHP-Info
 
+![Mgt Developer Toolbar](doc/static_files/mgt_developer_toolbar.png "Mgt Developer Toolbar")
 
 ## Installation with Composer
 
