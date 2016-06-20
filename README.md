@@ -79,4 +79,4 @@ Database Queries
 
 Nested Blocks
 
-![Nested Blocks](doc/static_files/nested_blocks.png "Nested Blocks")
+![Nested Blocks](doc/static_files/blocks.png "Nested Blocks")
