@@ -33,54 +33,59 @@ class Zero implements OutputInterface
     
     public function display(Stat $stat)
     {
-        $objectManager = ObjectManager::getInstance();
-        $registry = $objectManager->get('\Magento\Framework\Registry');
-        $config = $objectManager->get('\Mgt\DeveloperToolbar\Model\Config');
-        $isEnabled = $config->isEnabled();
-        $collect = $registry->registry('mgt_developer_toolbar_collect');
-        
-        if (true === $isEnabled && false !== $collect) {
-            $cache = $objectManager->get('\Magento\Framework\App\CacheInterface');
-            $token = $registry->registry('mgt_developer_toolbar_token');
+        try {
+            $objectManager = ObjectManager::getInstance();
             
-            $timers = array();
-            $filteredTimerIds = $stat->getFilteredTimerIds();
-
-            foreach ($filteredTimerIds as $timerId) {
-                $timers[] = [
-                    'id'  => $timerId,
-                    'sum'   => $stat->fetch($timerId, 'sum'),
-                    'avg'   => $stat->fetch($timerId, 'avg'),
-                    'count' => $stat->fetch($timerId, 'count'),
-                ];
-            }
+            $registry = $objectManager->get('\Magento\Framework\Registry');
+            $config = $objectManager->get('\Mgt\DeveloperToolbar\Model\Config');
+            $isEnabled = $config->isEnabled();
+            $collect = $registry->registry('mgt_developer_toolbar_collect');
             
-            $cacheId = sprintf('%s_%s', self::CACHE_ID_TIMERS_PREFIX, $token);
-            $cache->save(serialize($timers), $cacheId, [self::CACHE_TAG]);
+            if (true === $isEnabled && false !== $collect) {
+                $cache = $objectManager->get('\Magento\Framework\App\CacheInterface');
+                $token = $registry->registry('mgt_developer_toolbar_token');
             
-            $resourceConnection = $objectManager->get('\Magento\Framework\App\ResourceConnection');
-            $readConnection = $resourceConnection->getConnection('read');
-            $dbProfiler = $readConnection->getProfiler();
-            $queryProfiles = $dbProfiler->getQueryProfiles();
-            $queries = array();
+                $timers = array();
+                $filteredTimerIds = $stat->getFilteredTimerIds();
             
-            if ($queryProfiles && count($queryProfiles)) {
-                foreach ($queryProfiles as $queryProfile) {
-                    $queries[] = [
-                        'query' => $queryProfile->getQuery(),
-                        'type'  => $queryProfile->getQueryType(),
-                        'time'  => $queryProfile->getElapsedSecs()
+                foreach ($filteredTimerIds as $timerId) {
+                    $timers[] = [
+                        'id'  => $timerId,
+                        'sum'   => $stat->fetch($timerId, 'sum'),
+                        'avg'   => $stat->fetch($timerId, 'avg'),
+                        'count' => $stat->fetch($timerId, 'count'),
                     ];
                 }
+            
+                $cacheId = sprintf('%s_%s', self::CACHE_ID_TIMERS_PREFIX, $token);
+                $cache->save(serialize($timers), $cacheId, [self::CACHE_TAG]);
+            
+                $resourceConnection = $objectManager->get('\Magento\Framework\App\ResourceConnection');
+                $readConnection = $resourceConnection->getConnection('read');
+                $dbProfiler = $readConnection->getProfiler();
+                $queryProfiles = $dbProfiler->getQueryProfiles();
+                $queries = array();
+            
+                if ($queryProfiles && count($queryProfiles)) {
+                    foreach ($queryProfiles as $queryProfile) {
+                        $queries[] = [
+                                        'query' => $queryProfile->getQuery(),
+                                        'type'  => $queryProfile->getQueryType(),
+                                        'time'  => $queryProfile->getElapsedSecs()
+                        ];
+                    }
+                }
+            
+                $cacheId = sprintf('%s_%s', self::CACHE_ID_QUERIES_PREFIX, $token);
+                $cache->save(serialize($queries), $cacheId, [self::CACHE_TAG]);
             }
-
-            $cacheId = sprintf('%s_%s', self::CACHE_ID_QUERIES_PREFIX, $token);
-            $cache->save(serialize($queries), $cacheId, [self::CACHE_TAG]);
+            
+            $reflectionClass = new \ReflectionClass('\Magento\Framework\Profiler');
+            $reflectionProperty = $reflectionClass->getProperty('_enabled');
+            $reflectionProperty->setAccessible(true);
+            $reflectionProperty->setValue(false);
+            
+        } catch (\Exception $e) {
         }
-
-        $reflectionClass = new \ReflectionClass('\Magento\Framework\Profiler');
-        $reflectionProperty = $reflectionClass->getProperty('_enabled');
-        $reflectionProperty->setAccessible(true);
-        $reflectionProperty->setValue(false);
     }
 }
