@@ -69,9 +69,9 @@ class Zero implements OutputInterface
                 if ($queryProfiles && count($queryProfiles)) {
                     foreach ($queryProfiles as $queryProfile) {
                         $queries[] = [
-                                        'query' => $queryProfile->getQuery(),
-                                        'type'  => $queryProfile->getQueryType(),
-                                        'time'  => $queryProfile->getElapsedSecs()
+                            'query' => $queryProfile->getQuery(),
+                            'type'  => $queryProfile->getQueryType(),
+                            'time'  => $queryProfile->getElapsedSecs()
                         ];
                     }
                 }
