@@ -28,12 +28,11 @@ The toolbar shows you all important information for performance optimisation and
 * Navigation to your project and run these commands
  
 ```bash
-composer config repositories.mgt-developertoolbar vcs https://github.com/mgtcommerce/Mgt_Developertoolbar.git
-composer require mgtcommerce/module-mgtdevelopertoolbar:dev-master
+composer require mgtcommerce/module-mgtdevelopertoolbar
 
 php bin/magento setup:upgrade
 rm -rf pub/static/* 
-rm -rf var/view_preprocessed/*
+rm -rf var/*
 
 php bin/magento setup:static-content:deploy
 ```
