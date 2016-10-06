@@ -46,7 +46,7 @@ php bin/magento setup:static-content:deploy
 ```bash
 php bin/magento setup:upgrade
 rm -rf pub/static/* 
-rm -rf var/view_preprocessed/*
+rm -rf var/*
 
 php bin/magento setup:static-content:deploy
 ```
