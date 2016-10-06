@@ -3,10 +3,9 @@
   "description": "Mgt Developer Toolbar",
   "keywords": ["magento developer toolbar", "mgt developer toolbar"],
   "homepage": "https://www.mgt-commerce.com",
-  "minimum-stability": "dev",
   "type": "magento2-module",
   "require": {
-    "php": "^5.6.0 || ^7.0",
+    "php": ">=5.5.9",
     "magento/framework": "~100.1"
   },
   "version": "1.0.1",
@@ -15,6 +14,12 @@
     "files": [ "src/app/code/Mgt/DeveloperToolbar/registration.php" ],
     "psr-4": {
       "Mgt\\DeveloperToolbar\\": "src/app/code/Mgt/DeveloperToolbar"
+    }
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "master"
     }
   }
 }
