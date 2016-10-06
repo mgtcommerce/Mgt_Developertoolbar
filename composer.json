@@ -3,9 +3,10 @@
   "description": "Mgt Developer Toolbar",
   "type": "magento2-module",
   "require": {
-    "php": "~5.6.0|~7.0.0",
+    "php": "^5.6.0 || ^7.0",
     "magento/framework": "~100.1"
   },
+  "minimum-stability": "dev",
   "version": "1.0.0",
   "license": [ "proprietary" ],
   "autoload": {
