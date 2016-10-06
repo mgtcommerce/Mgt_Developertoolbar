@@ -6,7 +6,7 @@
     "php": "^5.6.0 || ^7.0",
     "magento/framework": "~100.1"
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "alpha",
   "version": "1.0.0",
   "license": [ "proprietary" ],
   "autoload": {
