@@ -35,6 +35,14 @@ class Zero implements OutputInterface
     {
         try {
             $objectManager = ObjectManager::getInstance();
+            $objectManager->configure(
+                [
+                    'preferences' => [
+                        \Magento\Framework\App\Config\Scope\ReaderPoolInterface::class =>
+                            \Magento\Store\Model\Config\Reader\ReaderPool::class
+                    ]
+                ]
+            );
             
             $registry = $objectManager->get('\Magento\Framework\Registry');
             $config = $objectManager->get('\Mgt\DeveloperToolbar\Model\Config');
