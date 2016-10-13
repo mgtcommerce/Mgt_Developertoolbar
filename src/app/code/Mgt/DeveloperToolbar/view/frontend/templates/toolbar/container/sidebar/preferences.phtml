@@ -1,0 +1,37 @@
+<?php 
+
+$preferences = $this->getPreferences();
+
+?>
+
+<div class="mgt-developer-toolbar-sidebar-blocks">
+  <div class="container">
+    <div class="mgt-developer-toolbar-sidebar-preferences">
+      <h2><?php echo __('Preferences'); ?></h2>
+      <table cellspacing="0" cellpadding="0" class="data-table">
+        <thead>
+          <tr>
+            <th width="50%">
+              <?php echo __('For'); ?>
+            </th>
+            <th width="50%">
+              <?php echo __('Class'); ?>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($preferences as $for => $class): ?>
+            <tr>
+              <td>
+                <?php echo $for; ?>
+              </td>
+              <td>
+                <?php echo $class; ?>
+              </td>
+            </tr>
+          <?php endforeach ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

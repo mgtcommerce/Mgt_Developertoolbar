@@ -1,0 +1,22 @@
+<?php 
+
+$activeBlock = $this->getActiveBlock();
+$token = $this->getToken();
+$childrenNames = $block->getChildNames();
+
+?>
+
+<div class="mgt-developer-toolbar-container-sidebar">
+  <ul>
+    <?php if (count($childrenNames)): ?>
+      <?php foreach ($childrenNames as $childName): ?>
+        <?php 
+          $childBlock = $block->getChildBlock($childName);
+        ?>
+        <li <?php echo ($activeBlock == $childName ? 'class="active"' : ''); ?>>
+          <a href="<?php echo $block->getUrl('mgtdevelopertoolbar/toolbar/container/execute', ['block' => $childName, 'token' => $token]); ?>"><?php echo $childBlock->getLabel(); ?></a>
+        </li>
+      <?php endforeach ?>
+    <?php endif ?>
+  </ul>
+</div>

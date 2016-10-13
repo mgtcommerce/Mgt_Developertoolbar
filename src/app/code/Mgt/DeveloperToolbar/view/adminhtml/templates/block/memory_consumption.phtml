@@ -1,0 +1,33 @@
+<?php 
+
+$urlBuilder = $this->getUrlBuilder();
+$formatHelper = $this->helper('Mgt\DeveloperToolbar\Helper\Format');
+$memoryConsumption = $this->getMemoryConsumption();
+$phpMemoryLimit = $this->getPhpMemoryLimit();
+$token = $this->getToken();
+
+?>
+
+<div class="mgt-developer-toolbar-block mgt-developer-toolbar-block-memory-consumption">
+  <a href="<?php echo $urlBuilder->getUrl('mgtdevelopertoolbar/toolbar/container/execute', ['block' => 'profiler', 'token' => $token]); ?>">
+    <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" xml:space="preserve">
+      <path d="
+        M14.414,19.879H5.586c-2.602,0-4.719-2.186-4.719-4.874V1.438c0-0.727,0.59-1.317,1.317-1.317h15.633
+        c0.727,0,1.317,0.59,1.317,1.317v13.568C19.133,17.693,17.016,19.879,14.414,19.879z M2.867,2.121v12.885
+        c0,1.584,1.22,2.874,2.719,2.874h8.828c1.499,0,2.719-1.289,2.719-2.874V2.121H2.867z M4.294,13.94v1.27
+        c0,0.683,0.693,1.237,1.301,1.237h8.81c0.608,0,1.301-0.554,1.301-1.237v-1.27H4.294z M15.706,9.806H4.294v2.488h11.412V9.806z">
+      </path>
+    </svg>
+   <span><?php echo $formatHelper->formatBytes($memoryConsumption, 2); ?></span>
+  </a>
+  <div class="mgt-developer-toolbar-block-information" style="display:none;">
+    <ul>
+      <li>
+         <strong><?php echo __('Memory Consumption') ?>:</strong> <?php echo $formatHelper->formatBytes($memoryConsumption, 2); ?>
+      </li>
+      <li>
+         <strong><?php echo __('PHP Memory Limit') ?>:</strong> <?php echo $formatHelper->formatBytes($phpMemoryLimit); ?>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,449 @@
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.mgtcommerce-logo {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAZCAYAAADTyxWqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjVEMjA4OTI0OTNCRkRCMTE5MTRBODU5MEQzMTUwOEM4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkIwRDFFMUYwMkM4QjExRTZCRjNDRDIxNTJEQkUzQTg5IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkIwRDFFMUVGMkM4QjExRTZCRjNDRDIxNTJEQkUzQTg5IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGODdGMTE3NDA3MjA2ODExODIyQUM5NzcyMTk5ODE5RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExODIyQUM5NzcyMTk5ODE5RiIvPiA8ZGM6dGl0bGU+IDxyZGY6QWx0PiA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlByaW50PC9yZGY6bGk+IDwvcmRmOkFsdD4gPC9kYzp0aXRsZT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz50yYc8AAAByUlEQVR42pyUSyiEURTH78wg9JVn8opClIUljShZWKlRIiXFkoWFWLKRLYliJytWHklJzKhZjGd5rKhZWSgSCyJk/O/MuXXcvvkec+o3c++5d/5zzr3nXJ8QhhAiI1UKwSgIgvI0kboNgVmQS/PXVMSywR5o1fynbsW6QCUJcnuRYl4XQr1gEwxTeu9s7Qbce11EtE7jOtBEosq25IcTsXqwBjzMhxsU1aCfojoQiQ2GndghaKfxHLgDSzQ/AuPgguaGFRMgRlwxf5j5A8pvdpvyTEpBFRhj/mK6SZleC/n2wbbaoKfZCXYsUn4EPlBAcz84Vos8shqwbHN+RWy8wIX0yEKgzWGpnIFm8MOdqjSmXQg9gwFdiIt9OBT6At3g1mzRl3hKRJjeFNm8TyBLK1Jlsjhnkv0T74ApUAIm6dbMLN8qbC72C/rANWjUGllZDshMJqZKIx2gwkUeKKM6mqei5T/eAJ/JxFRprIBBsAgeKJ1dEGR7Q6xHk5nhZ332Td891G9Rmr+BWps+jp9ZQEv7nNKR1gEuwQi9FpbmSbwGooFdgmziyP89cYvZicnIKmgcpcaNaHtiToRUWvLJPQGrLjrB1P4EGADT+1kLUwS9FgAAAABJRU5ErkJggg==');
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: auto 17px;
+  padding-left: 22px;
+}
+
+#mgt-developer-toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  z-index: 2147483647;
+  text-align: left;
+  color: #ffffff;
+  background-color: #323232;
+  border-bottom: 4px solid #e97900;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #ffffff !important;
+}
+
+#mgt-developer-toolbar a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#mgt-developer-toolbar * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.mgt-developer-toolbar-logo {
+  cursor: pointer;
+  float: left;
+  margin: 0px 15px 0px 7px;
+  padding: 5px 0px 0px 0px;
+}
+
+.mgt-developer-toolbar-logo img {
+  max-width: none;
+}
+
+.mgt-developer-toolbar-blocks {
+  float: left;
+  padding: 0px 20px 0px 0px;
+}
+
+.mgt-developer-toolbar-return-to-site {
+  float: right;
+  text-align: center;
+  margin: 7px 10px 0px 0px;
+}
+
+.mgt-developer-toolbar-return-to-site a {
+  display: block;
+  line-height: 30px;
+  color: #ffffff;
+  background: #de3e38;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0px 20px;
+  font-size: 13px;
+}
+
+.mgt-developer-toolbar-return-to-site a:hover {
+  background: #e97900;	
+}
+
+.mgt-developer-toolbar-blocks svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.mgt-developer-toolbar-block {
+  float: left;
+  margin-right: 10px;
+  position: relative;
+}
+
+.mgt-developer-toolbar-block a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0px 15px;
+  line-height: 45px;
+  display: block;
+}
+
+.mgt-developer-toolbar-block a:hover {
+  background: #636363;
+}
+
+.mgt-developer-toolbar-block a:hover > svg * {
+  fill: #323232;
+}
+
+.mgt-developer-toolbar-block span {
+  padding: 0px 0px 0px 10px;
+}
+
+.mgt-developer-toolbar-block-information {
+  background: #636363;
+  position: absolute;
+  padding: 10px 50px 10px 10px;
+  top: 45px;
+  left: 0px;
+  /*min-width: 350px;*/
+  white-space: nowrap;
+}
+
+.mgt-developer-toolbar-block-information ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mgt-developer-toolbar-block-information ul li {
+  padding: 0px 0px 5px 0px;
+  margin: 0px;
+}
+
+.mgt-developer-toolbar-block-info span.mode {
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.mgt-developer-toolbar-block-magento-version svg  {
+  fill: #2082a7;
+}
+
+.mgt-developer-toolbar-block-php-parsetime svg  {
+  fill: #d13674;
+}
+
+.mgt-developer-toolbar-block-memory-consumption svg {
+  fill: #7bb301;
+}
+
+.mgt-developer-toolbar-block-database-queries svg {
+  fill: #e97900;
+}
+
+body.mgtdevelopertoolbar-toolbar-container {
+  margin: 0px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 13px !important;
+  padding: 45px 0px 0px 0px;
+  background:url(../images/container_bg.png) repeat-y #f9f9f9;
+}
+
+body.mgtdevelopertoolbar-toolbar-container a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  padding-right: 15px;
+}
+
+.mgt-developer-toolbar-container-summary {
+  background: #e97900;
+  color: #ffffff;
+  padding: 20px 10px;
+}
+
+.mgt-developer-toolbar-container-summary h2 {
+  font-weight: 30px;
+  margin: 0px;
+  padding: 0px 0px 15px 0px;
+}
+
+.mgt-developer-toolbar-container-summary h2 a {
+  color: #ffffff;
+}
+
+.mgt-developer-toolbar-container-summary h2 a:hover {
+  text-decoration: underline;
+}
+
+.mgt-developer-toolbar-container-summary ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.mgt-developer-toolbar-container-summary ul li {
+  display: inline;
+  padding: 0px 30px 0px 0px;
+}
+
+.mgt-developer-toolbar-container-sidebar {
+  float:left;
+  width: 220px;
+  padding: 10px 0px;
+  color: #ffffff;
+}
+
+.mgt-developer-toolbar-container-sidebar ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.mgt-developer-toolbar-container-sidebar ul li a {
+  color: #ffffff;
+  line-height: 30px;
+  display: block;
+  padding: 0px 20px 0px 20px;
+  font-size: 16px;
+  border-bottom: 3px solid #323232;
+}
+
+.mgt-developer-toolbar-container-sidebar ul li a:hover {
+  background: #636363;
+}
+
+.mgt-developer-toolbar-container-sidebar ul li.active a {
+  background: #636363;
+}
+
+.mgt-developer-toolbar-container-collector-content {
+  padding: 10px 20px 10px 20px;
+  margin: 0px 0px 0px 220px;
+}
+
+.mgt-developer-toolbar-container-collector-content h2 {
+  font-size: 28px;
+  font-weight: normal;
+  margin: 0px 0px 15px 0px;
+}
+
+.mgt-developer-toolbar-container-collector-content h3 {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 25px 0px 15px 0px;
+}
+
+.mgt-developer-toolbar-sidebar-metrics {
+  padding: 0px 0px 30px 0px;
+  overflow: auto;
+}
+
+.mgt-developer-toolbar-sidebar-metric {
+  float: left;
+  min-width: 100px;
+  min-height: 70px;
+  border: 1px solid #E0E0E0;
+  background: #ffffff;
+  border: 1px solid #E0E0E0; 
+  box-shadow: 0px 0px 1px rgba(128, 128, 128, .2);
+  margin-right: 30px;
+}
+
+.mgt-developer-toolbar-sidebar-metric span.value {
+  display: block;
+  font-size: 28px;
+  padding: 8px 15px 4px;
+  text-align: center;
+}
+
+.mgt-developer-toolbar-sidebar-metric span.label {
+  background: #E0E0E0;
+  color: #222;
+  display: block;
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+}
+
+table.data-table {
+  background: #ffffff; 
+  border: 1px solid #E0E0E0; 
+  width: 100%;
+}
+
+table.data-table th, table.data-table td {
+  padding: 8px 10px;
+}
+
+table.data-table th {
+  font-weight: bold;
+  text-align: left;
+}
+
+table.data-table thead th {
+  background-color: #E0E0E0;
+}
+
+table.data-table tbody th,
+table.data-table tbody td {
+  font-size: 15px;
+  border: 1px solid #E0E0E0;
+  border-width: 1px 0;
+}
+
+.no-parameters {
+  border: 4px dashed #E0E0E0;
+  color: #999999;
+  padding: 15px;
+}
+
+.no-parameters p {
+  padding: 0px 0px 0px 20px;
+}
+
+.mgt-developer-toolbar-sidebar-profiler-grid {
+  background: #ffffff;
+  padding: 0px;
+}
+
+.mgt-developer-toolbar-sidebar-profiler-grid table.data-table-profiler tr td {
+  position: relative;
+}
+
+.mgt-developer-toolbar-sidebar-profiler-grid table.data-table-profiler tr:hover td {
+  background: #e5f7fe;
+  cursor: pointer;
+}
+
+.mgt-developer-toolbar-sidebar-profiler-grid table.data-table-profiler span.time-percentage {
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  background: #e97900;
+  height: 2px; 
+}
+
+.mgt-developer-toolbar-sidebar-database-queries pre {
+  padding: 10px;
+  margin: 0px;
+  white-space: normal;
+}
+
+.mgt-developer-toolbar-sidebar-database-queries td {
+  vertical-align: top;
+}
+
+.mgt-developer-toolbar-sidebar-block-parent {
+  background: #DDDDDD;
+}
+
+.mgt-developer-toolbar-sidebar-blocks-container ul {
+  list-style-type: none;
+  padding: 10px 20px;
+  background: #ffffff;
+}
+
+.mgt-developer-toolbar-sidebar-blocks-container ul li {
+  padding: 0px 10px;
+}
+
+.mgt-developer-toolbar-sidebar-blocks-container ul li a {
+  text-decoration: none;
+  color: #666666;
+  background: url(../images/bullet_toggle_plus.png) no-repeat 0 3px;
+  padding: 0px 0px 0px 15px;
+  line-height: 20px;
+  display: block;
+}
+
+ul.mgt-developer-toolbar-sidebar-block-properties {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+ul.mgt-developer-toolbar-sidebar-block-properties li {
+  line-height: 18px;
+  font-size: 11px;
+  color: #666666;
+}
+
+.mgt-developer-toolbar-sidebar-events a {
+  color: #000000;
+  text-decoration: none;
+  background: url(../images/bullet_toggle_plus.png) no-repeat 0 3px;
+  display: block;
+  padding: 0px 0px 0px 20px;
+}
+
+.mgt-developer-toolbar-sidebar-events table tr:hover td {
+  background: #e5f7fe;
+  cursor: pointer;
+}
+
+.mgt-developer-toolbar-sidebar-events ul.observers {
+  list-style-type: none;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 5px 0px;
+  margin: 10px 0px 0px 0px;
+}
+
+.mgt-developer-toolbar-sidebar-events ul.observers li {
+  line-height: 20px;
+  font-size: 13px;
+  padding: 5px 0px 5px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.mgt-developer-toolbar-sidebar-events ul.observers li:last-child {
+  border-bottom: 0px;
+}
+
+.mgt-developer-toolbar-sidebar-plugins a {
+  color: #000000;
+  text-decoration: none;
+  background: url(../images/bullet_toggle_plus.png) no-repeat 0 3px;
+  display: block;
+  padding: 0px 0px 0px 20px; 
+}
+
+.mgt-developer-toolbar-sidebar-plugins table tr:hover td {
+  background: #e5f7fe;
+  cursor: pointer;
+}
+
+.mgt-developer-toolbar-sidebar-plugins ul.plugins {
+  list-style-type: none;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 5px 0px;
+  margin: 10px 0px 0px 0px;
+}
+
+.mgt-developer-toolbar-sidebar-plugins ul.plugins li {
+  line-height: 20px;
+  font-size: 13px;
+  padding: 5px 0px 5px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.mgt-developer-toolbar-sidebar-plugins ul.plugins li:last-child {
+  border-bottom: 0px;
+}
