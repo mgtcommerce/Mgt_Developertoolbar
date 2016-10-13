@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <system>
+            <groups>
+                <mgt_base translate="label" module="mgt_base">
+                    <label>Mgt-Commerce.com Notifications</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>280</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <interests translate="label">
+                          <label>I'd like to be informed by Mgt-Commerce about:</label>
+                          <comment></comment>
+                          <frontend_type>multiselect</frontend_type>
+                          <sort_order>100</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>1</show_in_website>
+                          <show_in_store>1</show_in_store>
+                          <can_be_empty>1</can_be_empty>
+                          <source_model>mgt_base/source_updates_type</source_model>
+                        </interests>
+                          <feed_url translate="label">
+                            <label>Feed Url</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </feed_url>
+                      </fields>
+                  </mgt_base>
+             </groups>
+        </system>
+    </sections>
+</config>

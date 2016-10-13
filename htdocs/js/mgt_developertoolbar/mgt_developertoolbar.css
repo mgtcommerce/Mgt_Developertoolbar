@@ -1,0 +1,204 @@
+#mgt-developer-toolbar-container {
+  position:absolute;
+  top:0px;
+  right:0px;
+  float:right;
+  background:#FFFFFF;
+  z-index:10000;
+  text-align:left;
+  border-left:1px solid #DDDDDD;
+  border-bottom:1px solid #DDDDDD;
+  padding:2px 0px;
+}
+
+#mgt-developer-toolbar-powered-by {
+  position:absolute;
+  top:26px;
+  padding:0px 20px 2px 20px;
+  border-left:1px solid #DDDDDD;
+  border-bottom:1px solid #DDDDDD;
+  background:#FFFFFF;
+  z-index:11000;
+  right:0px;
+  float:right;
+  font-size:10px;
+  color:#666666;
+}
+
+#mgt-developer-toolbar-powered-by a {
+  text-decoration:none;
+  color:#FF5200;
+}
+
+#mgt-developer-toolbar-powered-by a:hover {
+  text-decoration:underline;
+}
+
+#mgt-developer-toolbar-powered-by a span {
+  color:#000000;
+}
+
+#mgt-developer-toolbar-container a {
+  text-decoration:none;
+  color:#666666;    
+}
+ 
+#mgt-developer-toolbar-container img.magento-logo {
+  float:left;
+  padding:0px 8px 0px 8px; 
+  cursor:pointer;
+}
+ 
+#mgt-developer-toolbar-container ul {
+  float:left;
+  padding:0px 10px 0px 8px; 
+}
+ 
+#mgt-developer-toolbar-container ul li {
+  float:left; 
+  line-height:22px;
+  padding:0px 15px 0px 0px;
+}
+
+#mgt-developer-toolbar-container ul li.content {
+  cursor:pointer;
+}
+ 
+#mgt-developer-toolbar-container ul li img {
+  padding:3px 0px 0px 0px;
+  vertical-align: top;
+}
+
+#mgt-developer-toolbar-container ul li.version {
+  background:#666666;
+  opacity:0.8;
+  color:#FFFFFF;
+  padding:0px 9px 0px 9px;
+  margin:0px 9px 0px 0px;
+}
+ 
+.mgt-developer-toolbar-details {
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:9999;
+  width:98%;
+  background:#ffffff;
+  border:1px solid #dddddd; 
+  text-align:left; 
+  padding:10px 8px 10px 8px;
+}
+
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container {
+  border-bottom:1px solid #DDDDDD;
+  height:20px;
+  margin:0px 0px 10px 0px;
+}
+
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container li {
+  float:left;   
+  margin:0px 10px 0px 0px;
+  line-height:20px;
+  border:1px solid #DDDDDD;
+  border-bottom:0px;
+}
+
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container li a {
+  text-decoration:none;
+  color:#666666;   
+  display:block; 
+  padding:0px 20px;
+}
+
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container li.active a,
+div.mgt-developer-toolbar-tab-container ul.mgt-developer-toolbar-tab-container li a:hover  {
+  color:#666666;
+  background:#DDDDDD;
+  display:block; 
+  padding:0px 20px;
+}
+
+.mgt-developer-toolbar-tab-container table td {
+  padding:0px 20px 5px 0px;
+  vertical-align:top;  
+}
+
+.mgt-developer-toolbar-phpinfo-display {
+  width:600px;
+  overflow:hidden;
+  text-align:left;
+}
+
+#mgt-developer-toolbar-tab-database-content ol {
+  list-style:decimal;
+  padding:20px 0px 0px 20px;
+  width:600px;    
+}
+
+#mgt-developer-toolbar-tab-database-content ol li {
+  padding:5px 10px;
+  margin:0px 0px 10px 0px;
+}
+
+#mgt-developer-toolbar-tab-database-content ol li.even {
+  background:#DDDDDD;
+}
+
+span.mgt-developer-toolbar-log-info {
+  font-weight:bold;
+  color:#FF5200;
+}
+
+#mgt-developer-toolbart-tab-database-content span.query-info {
+  display:block;
+  font-size:10px;
+  color:#666666;
+}
+
+.mgt-developer-toolbar-profiler-table {
+  border:1px solid #DDDDDD;
+}
+
+.mgt-developer-toolbar-profiler-table td {
+  padding:2px 15px !important;     
+}
+
+.mgt-developer-toolbar-profiler-table tr.head td {
+  font-weight:bold;
+}
+
+.mgt-developer-toolbar-profiler-table tr.odd td {
+  background:#DDDDDD;     
+}
+
+#mgt-developer-toolbar-tab-blocks-content, #mgt-developer-toolbar-tab-events-content {
+  width:550px;
+}
+
+#mgt-developer-toolbar-tab-blocks-content ul, #mgt-developer-toolbar-tab-events-content ul {
+  padding:5px;
+  background:#FFFFFF;
+}
+
+#mgt-developer-toolbar-tab-blocks-content ul.mgt-developer-toolbar-block-properties, 
+#mgt-developer-toolbar-tab-events-content ul.mgt-developer-toolbar-area-events {
+  padding:2px;
+  font-size:11px;
+  border:1px solid silver;
+}
+
+#mgt-developer-toolbar-tab-blocks-content ul li, #mgt-developer-toolbar-tab-events-content ul li {
+  padding:0px 10px; 
+}
+
+#mgt-developer-toolbar-tab-blocks-content ul li a, #mgt-developer-toolbar-tab-events-content ul li a {
+  text-decoration:none;
+  color:#666666;
+  background:url(/media/mgt_developertoolbar/bullet_toggle_plus.png) no-repeat 0 1px; 
+  padding:0px 0px 0px 15px;
+}
+
+#mgt-developer-toolbar-tab-blocks-content ul li.mgt-developer-toolbar-root-element, 
+#mgt-developer-toolbar-tab-events-content ul li.mgt-developer-toolbar-root-element  {
+  background:#DDDDDD;
+}

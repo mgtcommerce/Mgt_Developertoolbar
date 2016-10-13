@@ -1,0 +1,19 @@
+<?php if ($this->getTabs()): ?>
+
+<div class="mgt-developer-toolbar-tab-container" id="mgt-developer-toolbar-tab-container-<?php echo $this->getName(); ?>">
+  <ul class="mgt-developer-toolbar-tab-container">
+    <?php foreach ($this->getTabs() as $tab): ?>
+      <li id="mgt-developer-toolbar-tab-<?php echo $tab->getName();?>" class="mgt-developer-toolbar-tab-<?php echo $tab->getName();?> <?php echo ($tab->isActive() ? 'active' : '') ?>">
+        <a href="javascript:void(0);"><?php echo $tab->getLabel(); ?></a>
+      </li>
+    <?php endforeach ?>
+  </ul>
+  
+  <?php foreach ($this->getTabs() as $tab): ?>
+    <div id="mgt-developer-toolbar-tab-<?php echo $tab->getName();?>-content" class="mgt-developer-toolbar-tab-content" style="display:<?php echo ($tab->isActive() ? 'block' : 'none'); ?>">
+      <?php echo $tab->render(); ?> 
+    </div>
+  <?php endforeach ?>    
+</div>
+
+<?php endif ?>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>js_css</type><name>mgt_developertoolbar/mgt_developertoolbar.css</name></action>
+            <action method="addJs"><script>mgt_developertoolbar/jquery-1.7.2.min.js</script></action>
+            <action method="addJs"><script>mgt_developertoolbar/mgt_developertoolbar.js</script></action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="mgt_developertoolbar/toolbar" name="mgt_developertoolbar" template="mgt_developertoolbar/toolbar.phtml" />
+        </reference>
+    </default>
+</layout>

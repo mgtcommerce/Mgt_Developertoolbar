@@ -1,0 +1,15 @@
+3.0.0 Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
+- add function to enable/disable
+- add ip restrictions - comma seperated
+- show complete template path in nested blocks
+- show number of inserts, updates, select, deletes and transactions
+- new jquery version 1.7.2 has been added
+
+2.0.0
+
+- add handles and events/observers in info block
+- developer toolbar now available for backend
+
+1.5.0
+
+- fixed bug in profiler sort order

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <mgtcommerce translate="title" module="mgt_base">
+            <title>Mgt-Commerce.com</title>
+            <sort_order>75</sort_order>
+            <action>adminhtml/mgt</action>
+       </mgtcommerce>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+              <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mgt_base>
+                                        <title>Mgt-Commerce.com - Module Information</title>
+                                    </mgt_base>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

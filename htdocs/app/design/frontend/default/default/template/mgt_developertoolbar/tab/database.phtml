@@ -1,0 +1,111 @@
+<?php 
+$_helper = Mage::helper('mgt_developertoolbar');
+$_profiler = $this->getProfiler();
+$_queries = $_profiler->getQueryProfiles();
+?>
+<?php if ($_queries): ?>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Executed:'); ?></strong>
+    </td>
+    <td>
+      <?php echo sprintf('%s queries in %s seconds', $_profiler->getTotalNumQueries(), $_profiler->getTotalElapsedSecs()); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Average query length:'); ?></strong>
+    </td>
+    <td>
+      <?php echo sprintf('%s seconds', $_profiler->getTotalNumQueries() &&  $_profiler->getTotalElapsedSecs() ? $_profiler->getTotalElapsedSecs()/$_profiler->getTotalNumQueries() : 0); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Queries per second:'); ?></strong>
+    </td>
+    <td>
+      <?php echo ($_profiler->getTotalNumQueries() && $_profiler->getTotalElapsedSecs() ?  $_profiler->getTotalNumQueries()/$_profiler->getTotalElapsedSecs() : 0); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Longest query length:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getLongestQueryTime(); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Longest query:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $_helper->formatSql(wordwrap($this->getLongestQuery())); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Total queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Insert queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::INSERT); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Update queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::UPDATE); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Read queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::SELECT); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Delete queries:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::DELETE); ?>  
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong><?php echo $this->__('Transactions:'); ?></strong>
+    </td>
+    <td>
+      <?php echo $this->getProfiler()->getTotalNumQueries(Zend_Db_Profiler::TRANSACTION); ?>  
+    </td>
+  </tr>
+</table>
+
+<ol>
+<?php 
+  $i = 0;
+  foreach ($_queries as $query): ?>
+    <li class="<?php echo ($i % 2 ? 'even' : 'odd')?>">
+      <?php echo $_helper->formatSql(wordwrap($query->getQuery())); ?>
+      <span class="mgt-developer-toolbar-query-info">
+      <?php echo $this->__('Elapsed seconds:'); ?> <?php echo $query->getElapsedSecs() ?>
+      </span>
+    </li>
+    <?php $i++; ?>
+  <?php endforeach ?>
+</ol>
+<?php  endif ?>

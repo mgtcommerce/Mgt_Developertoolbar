@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+     <modules>
+        <Mgt_Base>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mgt_Base>
+     </modules>
+</config>
