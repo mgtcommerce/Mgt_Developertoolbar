@@ -4,8 +4,6 @@
         <route id="mgtdevelopertoolbar" frontName="mgtdevelopertoolbar">
             <module name="Mgt_DeveloperToolbar" />
         </route>
-    </router>
-    <router id="standard">
         <route id="mgtfeed" frontName="mgtfeed">
             <module name="Mgt_DeveloperToolbar" />
         </route>
