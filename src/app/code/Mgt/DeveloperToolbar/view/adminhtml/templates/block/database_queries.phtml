@@ -1,10 +1,12 @@
-<?php 
+<?php
+// @codingStandardsIgnoreFile
+/** @var $block Mgt\DeveloperToolbar\Block\Toolbar\Block\DatabaseQueries */
 
-$urlBuilder = $this->getUrlBuilder();
-$profiler = $this->getProfiler();
-$totalElapsedSecs = number_format($this->getTotalElapsedSecs(), 3);
-$totalNumberOfQueries = (int)$this->getTotalNumQueries();
-$token = $this->getToken();
+$urlBuilder = $block->getUrlBuilder();
+$profiler = $block->getProfiler();
+$totalElapsedSecs = number_format($block->getTotalElapsedSecs(), 3);
+$totalNumberOfQueries = (int)$block->getTotalNumQueries();
+$token = $block->getToken();
 
 ?>
 

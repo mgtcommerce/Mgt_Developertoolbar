@@ -1,10 +1,12 @@
-<?php 
+<?php
+// @codingStandardsIgnoreFile
+/** @var $block Mgt\DeveloperToolbar\Block\Toolbar\Block\MemoryConsumption */
 
-$urlBuilder = $this->getUrlBuilder();
-$formatHelper = $this->helper('Mgt\DeveloperToolbar\Helper\Format');
-$memoryConsumption = $this->getMemoryConsumption();
-$phpMemoryLimit = $this->getPhpMemoryLimit();
-$token = $this->getToken();
+$urlBuilder = $block->getUrlBuilder();
+$formatHelper = $block->getFormatHelper();
+$memoryConsumption = $block->getMemoryConsumption();
+$phpMemoryLimit = $block->getPhpMemoryLimit();
+$token = $block->getToken();
 
 ?>
 
