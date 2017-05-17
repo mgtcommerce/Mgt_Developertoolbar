@@ -1,11 +1,13 @@
-<?php 
+<?php
+// @codingStandardsIgnoreFile
+/** @var $block Mgt\DeveloperToolbar\Block\Toolbar\Block\Info */
 
-$urlBuilder = $this->getUrlBuilder();
-$controllerModule = $this->getControllerModule();
-$controllerClassName = $this->getControllerClassName();
-$controllerActionName = $this->getControllerActionName();
-$mode = ucfirst($this->getMode());
-$token = $this->getToken();
+$urlBuilder = $block->getUrlBuilder();
+$controllerModule = $block->getControllerModule();
+$controllerClassName = $block->getControllerClassName();
+$controllerActionName = $block->getControllerActionName();
+$mode = ucfirst($block->getMode());
+$token = $block->getToken();
 
 ?>
 

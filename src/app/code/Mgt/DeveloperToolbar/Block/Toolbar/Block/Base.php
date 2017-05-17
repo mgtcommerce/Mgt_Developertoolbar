@@ -40,7 +40,7 @@ class Base extends Template
      * @var \Magento\Framework\App\ProductMetadataInterface
      */
     protected $productMetaData;
-    
+
     /**
      * @param Context $context
      */

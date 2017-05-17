@@ -51,7 +51,7 @@ class DatabaseQueries extends Base
      * @var Integer
      */
     protected $totalNumQueries;
-    
+
     /**
      * @param Context $context
      * @param ResourceConnection $resourceConnection
