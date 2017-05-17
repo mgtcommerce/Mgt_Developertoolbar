@@ -36,7 +36,7 @@ class DatabaseQueries extends Base
     /**
      *  Profiler
      *
-     * @var \Magento\Framework\DB\Profiler
+     * @var \Zend_Db_Profiler
      */
     protected $profiler;
     
