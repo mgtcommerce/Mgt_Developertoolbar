@@ -5,8 +5,8 @@
   "homepage": "https://www.mgt-commerce.com",
   "type": "magento2-module",
   "require": {
-    "php": ">=5.5.9",
-    "magento/framework": "~100.1"
+    "php": ">=7.0.0",
+    "magento/framework": "~101.0"
   },
   "version": "1.0.3",
   "license": [ "proprietary" ],
