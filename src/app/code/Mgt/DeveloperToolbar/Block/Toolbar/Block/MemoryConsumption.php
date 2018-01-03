@@ -63,6 +63,7 @@ class MemoryConsumption extends Base
             $convertToBytes = function($value) {
                 $value = trim($value);
                 $last = strtolower($value[strlen($value)-1]);
+                $value = (int)$value;
                 switch($last) {
                     case 'g':
                         $value *= 1024;
