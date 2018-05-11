@@ -63,6 +63,6 @@ class Update extends \Magento\Framework\App\Action\Action
 
     protected function check(\Magento\Framework\App\RequestInterface $request)
     {
-        
+
     }
 }
