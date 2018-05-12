@@ -21,6 +21,9 @@
  */
 namespace Mgt\DeveloperToolbar\Block\Toolbar\Block;
 
+use Mgt\DeveloperToolbar\Block\Context;
+use Mgt\DeveloperToolbar\Helper\Format;
+
 class MemoryConsumption extends Base
 {
     /**
@@ -32,8 +35,19 @@ class MemoryConsumption extends Base
      * @var Integer
      */
     protected $phpMemoryLimit;
-    
-    
+    /**
+     * @var Format
+     */
+    private $formatHelper;
+
+    public function __construct(
+        Context $context,
+        Format $formatHelper
+    ) {
+        $this->formatHelper = $formatHelper;
+        parent::__construct($context);
+    }
+
     public function setMemoryConsumption($memoryConsumption)
     {
         $this->memoryConsumption = $memoryConsumption;
@@ -78,5 +92,10 @@ class MemoryConsumption extends Base
             $this->phpMemoryLimit = $convertToBytes(ini_get('memory_limit'));
         }
         return $this->phpMemoryLimit;
+    }
+
+    public function getFormatHelper()
+    {
+        return $this->formatHelper;
     }
 }

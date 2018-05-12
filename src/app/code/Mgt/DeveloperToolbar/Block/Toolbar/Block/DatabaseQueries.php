@@ -36,7 +36,7 @@ class DatabaseQueries extends Base
     /**
      *  Profiler
      *
-     * @var \Magento\Framework\DB\Profiler
+     * @var \Zend_Db_Profiler
      */
     protected $profiler;
     
@@ -51,7 +51,7 @@ class DatabaseQueries extends Base
      * @var Integer
      */
     protected $totalNumQueries;
-    
+
     /**
      * @param Context $context
      * @param ResourceConnection $resourceConnection

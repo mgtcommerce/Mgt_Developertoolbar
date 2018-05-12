@@ -1,8 +1,10 @@
 <?php
+// @codingStandardsIgnoreFile
+/** @var $block Mgt\DeveloperToolbar\Block\Toolbar\Block\PhpParseTime */
 
-$urlBuilder = $this->getUrlBuilder();
-$phpParseTime = $this->getPhpParseTime();
-$token = $this->getToken();
+$urlBuilder = $block->getUrlBuilder();
+$phpParseTime = $block->getPhpParseTime();
+$token = $block->getToken();
 
 ?>
 

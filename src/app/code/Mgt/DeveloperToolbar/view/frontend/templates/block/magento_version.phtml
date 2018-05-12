@@ -1,8 +1,10 @@
-<?php 
+<?php
+// @codingStandardsIgnoreFile
+/** @var $block Mgt\DeveloperToolbar\Block\Toolbar\Block\MagentoVersion */
 
-$urlBuilder = $this->getUrlBuilder();
-$magentoVersion = $this->getMagentoVersion();
-$token = $this->getToken();
+$urlBuilder = $block->getUrlBuilder();
+$magentoVersion = $block->getMagentoVersion();
+$token = $block->getToken();
 
 ?>
 

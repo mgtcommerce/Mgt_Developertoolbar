@@ -31,25 +31,23 @@ class Format extends AbstractHelper
         if ($size < 1024) {
             $size = number_format($size, $decimals);
             $size .= ' KB';
-        } else  {
-            if ($size / 1024 < 1024)  {
-                $size = number_format($size / 1024, $decimals);
-                $size .= ' MB';
-            }
-            else if ($size / 1024 / 1024 < 1024) {
-                $size = number_format($size / 1024 / 1024, $decimals);
-                $size .= ' GB';
-            }
+        } elseif ($size / 1024 < 1024) {
+            $size = number_format($size / 1024, $decimals);
+            $size .= ' MB';
+        } elseif ($size / 1024 / 1024 < 1024) {
+            $size = number_format($size / 1024 / 1024, $decimals);
+            $size .= ' GB';
         }
+
         return $size;
     }
-    
+
     public function formatTime($number, $decimals = 2, $isSeconds = true)
     {
         if ($isSeconds) {
             $number *= 1000;
         }
-    
+
         return number_format($number, $decimals, '.', '');
     }
 }
