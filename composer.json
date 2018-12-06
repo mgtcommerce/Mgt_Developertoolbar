@@ -6,7 +6,6 @@
   "type": "magento2-module",
   "require": {
     "php": ">=7.0.0"
-    //"magento/framework": "~101.0"
   },
   "version": "1.0.6",
   "license": [ "proprietary" ],
