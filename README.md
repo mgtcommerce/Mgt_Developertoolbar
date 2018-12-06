@@ -28,7 +28,7 @@ The toolbar shows you all important information for performance optimisation and
 * Navigation to your project and run these commands
  
 ```bash
-composer require mgtcommerce/module-mgtdevelopertoolbar
+composer require --dev mgtcommerce/module-mgtdevelopertoolbar
 
 php bin/magento setup:upgrade
 rm -rf pub/static/* 
