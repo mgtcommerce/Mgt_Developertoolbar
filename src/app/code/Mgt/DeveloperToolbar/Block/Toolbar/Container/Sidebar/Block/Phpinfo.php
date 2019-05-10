@@ -38,10 +38,9 @@ class Phpinfo extends Block
         echo "<div class='mgt-developer-toolbar-phpinfo-display'><style type='text/css'>\n",
         join("\n",
             array_map(
-                create_function(
-                    '$i',
-                    'return ".mgt-developer-toolbar-phpinfo-display " . preg_replace( "/,/", ",.phpinfodisplay ", $i );'
-                ),
+                function ($i) {
+                    return ".mgt-developer-toolbar-phpinfo-display " . preg_replace( "/,/", ",.phpinfodisplay ", $i );
+                },
                 preg_split( '/\n/', $matches[1] )
             )
         ),
