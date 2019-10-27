@@ -1,8 +1,8 @@
 Mgt Developer Toolbar for Magento 2
 ============================
 
-The Mgt Developer Toolbar is a must have for Magento 2 developers and frontend guys.
-The toolbar shows you all important information for performance optimisation and magento development.
+The Mgt Developer Toolbar is a must-have for Magento 2 developers and frontend guys.
+The toolbar shows you all important information for performance optimisation and Magento development.
 
 ![Profiler](doc/static_files/profiler.png "Profiler")
 
@@ -31,8 +31,7 @@ The toolbar shows you all important information for performance optimisation and
 composer require --dev mgtcommerce/module-mgtdevelopertoolbar
 
 php bin/magento setup:upgrade
-rm -rf pub/static/* 
-rm -rf var/*
+rm -rf pub/static/* var/*
 
 php bin/magento setup:static-content:deploy
 ```
@@ -40,13 +39,12 @@ php bin/magento setup:static-content:deploy
 ## Installation without Composer
 
 * Download the files from github: https://github.com/mgtcommerce/Mgt_Developertoolbar/archive/master.zip
-* Extract archive and copy all directories from src/app/code/ to app/code/
+* Extract archive and copy all directories from `src/app/code/` to `app/code/`
 * Go to project home directory and execute these commands
 
 ```bash
 php bin/magento setup:upgrade
-rm -rf pub/static/* 
-rm -rf var/*
+rm -rf pub/static/* var/*
 
 php bin/magento setup:static-content:deploy
 ```
@@ -54,7 +52,7 @@ php bin/magento setup:static-content:deploy
 
 ## Usage
 
-To enable / disable the toolbar go to Stores --> Configuration --> MGT-COMMERCE.COM --> Developer Toolbar
+To enable / disable the toolbar, go to `Stores --> Configuration --> MGT-COMMERCE.COM --> Developer Toolbar`
 
 ![Enable Mgt Developer Toolbar](doc/static_files/enable_toolbar.png "Enable Mgt Developer Toolbar")
 
