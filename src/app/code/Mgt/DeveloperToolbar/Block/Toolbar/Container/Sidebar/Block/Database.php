@@ -16,7 +16,7 @@
  * @category    Mgt
  * @package     Mgt_DeveloperToolbar
  * @author      Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
- * @copyright   Copyright (c) 2016 (https://www.mgt-commerce.com)
+ * @copyright   Copyright (c) 2020 (https://www.mgt-commerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 namespace Mgt\DeveloperToolbar\Block\Toolbar\Container\Sidebar\Block;

@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/system_file.xsd">
     <system>
         <tab id="mgtcommerce" translate="label" sortOrder="100">
-            <label><![CDATA[<span class='mgtcommerce-logo'>Mgt-Commerce.com</span>]]></label>
+            <label>Mgt-Commerce.com</label>
         </tab>
         <section id="mgt_developer_toolbar" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>mgt_developer_toolbar</class>
