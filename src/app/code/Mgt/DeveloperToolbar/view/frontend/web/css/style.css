@@ -169,7 +169,7 @@ body.mgtdevelopertoolbar-toolbar-container a {
   text-decoration: none;
 }
 
-.container {
+body.mgtdevelopertoolbar-toolbar-container .container {
   max-width: 1000px;
   padding-right: 15px;
 }
