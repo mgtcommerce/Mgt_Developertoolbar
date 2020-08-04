@@ -31,9 +31,6 @@ The toolbar shows you all important information for performance optimisation and
 composer require --dev mgtcommerce/module-mgtdevelopertoolbar
 
 php bin/magento setup:upgrade
-rm -rf pub/static/* 
-rm -rf var/*
-
 php bin/magento setup:static-content:deploy
 ```
 
@@ -45,12 +42,8 @@ php bin/magento setup:static-content:deploy
 
 ```bash
 php bin/magento setup:upgrade
-rm -rf pub/static/* 
-rm -rf var/*
-
 php bin/magento setup:static-content:deploy
 ```
-
 
 ## Usage
 
