@@ -45,17 +45,7 @@ class Zero implements OutputInterface
                 $cache = $objectManager->get('\Magento\Framework\App\CacheInterface');
                 $token = $registry->registry('mgt_developer_toolbar_token');
             
-                $timers = array();
-                $filteredTimerIds = $stat->getFilteredTimerIds();
-            
-                foreach ($filteredTimerIds as $timerId) {
-                    $timers[] = [
-                        'id'  => $timerId,
-                        'sum'   => $stat->fetch($timerId, 'sum'),
-                        'avg'   => $stat->fetch($timerId, 'avg'),
-                        'count' => $stat->fetch($timerId, 'count'),
-                    ];
-                }
+                $timers = $this->getTimers($stat);
             
                 $cacheId = sprintf('%s_%s', self::CACHE_ID_TIMERS_PREFIX, $token);
                 $cache->save(serialize($timers), $cacheId, [self::CACHE_TAG]);
@@ -87,5 +77,27 @@ class Zero implements OutputInterface
             
         } catch (\Exception $e) {
         }
+    }
+
+    private function getTimers(Stat $stat)
+    {
+        $timers = [];
+        $filteredTimerIds = [];
+
+        try {
+            $filteredTimerIds = $stat->getFilteredTimerIds();
+        } catch (\Exception $e) {
+        }
+
+        foreach ($filteredTimerIds as $timerId) {
+            $timers[] = [
+                'id'  => $timerId,
+                'sum'   => $stat->fetch($timerId, 'sum'),
+                'avg'   => $stat->fetch($timerId, 'avg'),
+                'count' => $stat->fetch($timerId, 'count'),
+            ];
+        }
+
+        return $timers;
     }
 }
