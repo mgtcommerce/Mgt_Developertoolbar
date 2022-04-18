@@ -74,7 +74,13 @@ class Config
     
     public function getAllowedIps()
     {
-        $allowedIps = trim($this->scopeConfig->getValue('mgt_developer_toolbar/module/allowed_ip'));
+        $allowedIps = $this->scopeConfig->getValue('mgt_developer_toolbar/module/allowed_ip');
+
+        if (!$allowedIps) {
+            return [];
+        }
+
+        $allowedIps = trim($allowedIps);
         $allowedIps = array_map('trim', explode(',', $allowedIps));
         $allowedIps = array_filter($allowedIps);
         return $allowedIps;
