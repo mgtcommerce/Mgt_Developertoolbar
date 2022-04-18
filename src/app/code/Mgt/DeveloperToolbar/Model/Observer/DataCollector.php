@@ -327,7 +327,9 @@ class DataCollector implements ObserverInterface
                 $fileName = '';
                 
                 if (false !== $block) {
-                    $template = $block->getTemplateFile();
+                    if ($block->getTemplate()) {
+                        $template = $block->getTemplateFile();
+                    }
                     $class = get_class($block);
                     $reflectionClass = new \ReflectionClass($block);
                     $fileName =  $reflectionClass->getFileName();
