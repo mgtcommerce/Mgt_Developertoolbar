@@ -110,7 +110,7 @@ class Database extends Block
     
     public function getTotalElapsedSecs()
     {
-        return $this->totalElapsedSecs;
+        return (float) $this->totalElapsedSecs;
     }
     
     public function getQueriesByType($queryType)
