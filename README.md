@@ -5,7 +5,7 @@ The [MGT Developer Toolbar](https://www.mgt-commerce.com/docs/mgt-developer-tool
 must-have for Magento 2 developers and frontend guys.
 The toolbar shows you all important information for performance optimisation and Magento development.
 
-![Profiler](doc/static_files/profiler.png "Profiler")
+![Profiler](doc/static_files/profiler_screenshot.png "Profiler")
 
 ## Main Features
 
