@@ -54,13 +54,11 @@ class ToolbarPlugin
         \Closure $proceed,
         \Magento\Framework\App\RequestInterface $request
     ) {
-        
         if (!$subject instanceof \Magento\Framework\App\Action\Forward\Interceptor) {
             $controllerClassName = get_class($subject);
             $controllerClassName = str_replace('\Interceptor', '', $controllerClassName);
             $this->registry->register('mgt_developer_toolbar_class_name', $controllerClassName, true);
         }
-
         return $proceed($request);
     }
 }
