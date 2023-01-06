@@ -110,7 +110,7 @@ class Database extends Block
     
     public function getTotalElapsedSecs()
     {
-        return $this->totalElapsedSecs;
+        return (float)$this->totalElapsedSecs;
     }
     
     public function getQueriesByType($queryType)
@@ -130,7 +130,7 @@ class Database extends Block
         $queries = $this->getQueries();
 
         usort($queries, function($a, $b){
-            return $a['time'] < $b['time'];
+            return $a['time'] <=> $b['time'];
         });
         
         $queries = array_slice($queries, 0, $limit);
