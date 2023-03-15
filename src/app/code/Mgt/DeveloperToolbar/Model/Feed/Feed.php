@@ -21,6 +21,8 @@
  */
 namespace Mgt\DeveloperToolbar\Model\Feed;
 
+use Laminas\Http\Client;
+use Laminas\Http\Request;
 use Magento\Framework\Config\ConfigOptionsListConstants;
 
 class Feed extends \Magento\Framework\Model\AbstractModel
@@ -193,10 +195,11 @@ class Feed extends \Magento\Framework\Model\AbstractModel
                 'shop_url' => $this->storeManager->getStore()->getBaseUrl(),
                 'version'  => $this->productMetadata->getVersion(),
             ];
-            $client = new \Zend_Http_Client(self::FEED_URL);
+            $client = new Client(self::FEED_URL);
             $client->setParameterPost($postParams);
-            $client->setConfig(array('maxredirects' => 0, 'timeout' => 30));
-            $data = $client->request(\Zend_Http_Client::POST);
+            $client->setOptions(array('maxredirects' => 0, 'timeout' => 30));
+            $client->setMethod(Request::METHOD_POST);
+            $data = $client->send();
             if ($data = $data->getBody()) {
                 $xml = new \SimpleXMLElement($data);
             }
