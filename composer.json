@@ -1,11 +1,11 @@
 {
-  "name": "mgtcommerce/module-mgtdevelopertoolbar",
+  "name": "swissup/module-debug-toolbar",
   "description": "Mgt Developer Toolbar",
   "keywords": ["magento developer toolbar", "mgt developer toolbar"],
   "homepage": "https://www.mgt-commerce.com",
   "type": "magento2-module",
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.4.0"
   },
   "version": "1.0.10",
   "license": [ "proprietary" ],
@@ -13,12 +13,6 @@
     "files": [ "src/app/code/Mgt/DeveloperToolbar/registration.php" ],
     "psr-4": {
       "Mgt\\DeveloperToolbar\\": "src/app/code/Mgt/DeveloperToolbar"
-    }
-  },
-  "minimum-stability": "dev",
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.x-dev"
     }
   }
 }
