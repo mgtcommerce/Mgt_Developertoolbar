@@ -5,7 +5,8 @@
   "homepage": "https://www.mgt-commerce.com",
   "type": "magento2-module",
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.0.0",
+    "laminas/laminas-http": "*"
   },
   "version": "1.0.10",
   "license": [ "proprietary" ],
