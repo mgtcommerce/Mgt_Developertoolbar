@@ -88,7 +88,7 @@ class DataCollector implements ObserverInterface
     /**
      * @var \Magento\Framework\Stdlib\CookieManagerInterface
      */
-    protected $cookiesManager;
+    protected $cookieManager;
     
     /**
      * @var \Magento\Framework\Event\ManagerInterface
